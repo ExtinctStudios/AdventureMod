@@ -1,5 +1,6 @@
 package com.korp.adventuremod;
 
+import com.korp.adventuremod.armor.ModArmorMaterials;
 import com.korp.adventuremod.entity.GooberEntity;
 import com.korp.adventuremod.registries.ModEntity;
 import net.fabricmc.api.ModInitializer;
@@ -12,5 +13,7 @@ public class AdventureMod implements ModInitializer {
     @Override
     public void onInitialize() {
         ModEntity.initialize();
+
+        ModArmorMaterials.init();
     }
 }
