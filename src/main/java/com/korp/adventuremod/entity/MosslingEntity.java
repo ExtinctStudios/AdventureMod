@@ -8,8 +8,8 @@ import net.minecraft.entity.mob.HostileEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.world.World;
 
-public class GooberEntity extends HostileEntity {
-    public GooberEntity(EntityType<? extends HostileEntity> entityType, World world) {
+public class MosslingEntity extends HostileEntity {
+    public MosslingEntity(EntityType<? extends HostileEntity> entityType, World world) {
         super(entityType, world);
     }
 
@@ -32,7 +32,7 @@ public class GooberEntity extends HostileEntity {
 
     public static DefaultAttributeContainer.Builder createAttributes() {
         return HostileEntity.createHostileAttributes().add(
-                EntityAttributes.GENERIC_FOLLOW_RANGE, 35.0F)
+                        EntityAttributes.GENERIC_FOLLOW_RANGE, 35.0F)
                 .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.2F)
                 .add(EntityAttributes.GENERIC_ATTACK_DAMAGE, 3.0F);
     }

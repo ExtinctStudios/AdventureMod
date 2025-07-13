@@ -12,7 +12,5 @@ public class AdventureMod implements ModInitializer {
     @Override
     public void onInitialize() {
         ModEntity.initialize();
-
-        FabricDefaultAttributeRegistry.register(ModEntity.GOOBER, GooberEntity.createHostileAttributes());
     }
 }

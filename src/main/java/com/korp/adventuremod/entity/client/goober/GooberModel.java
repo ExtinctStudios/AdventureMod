@@ -1,4 +1,4 @@
-package com.korp.adventuremod.entity.client;
+package com.korp.adventuremod.entity.client.goober;
 
 import com.korp.adventuremod.AdventureMod;
 import com.korp.adventuremod.entity.GooberEntity;
@@ -8,8 +8,6 @@ import net.minecraft.client.render.entity.model.EntityModel;
 import net.minecraft.client.render.entity.model.EntityModelLayer;
 import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.util.Identifier;
-
-import javax.swing.text.html.parser.Entity;
 
 // Made with Blockbench 4.12.5
 // Exported for Minecraft version 1.17+ for Yarn

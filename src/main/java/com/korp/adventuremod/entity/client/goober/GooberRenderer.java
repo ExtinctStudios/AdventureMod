@@ -1,4 +1,4 @@
-package com.korp.adventuremod.entity.client;
+package com.korp.adventuremod.entity.client.goober;
 
 import com.korp.adventuremod.AdventureMod;
 import com.korp.adventuremod.entity.GooberEntity;
@@ -17,7 +17,6 @@ public class GooberRenderer extends MobEntityRenderer<GooberEntity, GooberModel<
     public Identifier getTexture(GooberEntity entity) {
         return Identifier.of(AdventureMod.MOD_ID, "textures/entity/goober/goober.png");
     }
-
 
     @Override
     public void render(GooberEntity livingEntity, float f, float g, MatrixStack matrixStack, VertexConsumerProvider vertexConsumerProvider, int i) {
