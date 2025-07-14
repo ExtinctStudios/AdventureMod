@@ -19,7 +19,7 @@ public class ModItem {
                     ArmorItem.Type.HELMET,
                     new Item.Settings()
                             .maxDamage(ArmorItem.Type.HELMET.getMaxDamage(LEAF_ARMOR_DURABILITY_MULTIPLIER))
-                            .attributeModifiers(AttributeModifiersComponent.builder().add(EntityAttributes.GENERIC_MOVEMENT_SPEED, new EntityAttributeModifier(Identifier.of(AdventureMod.MOD_ID, "speed_modifier"), 5, EntityAttributeModifier.Operation.ADD_VALUE), AttributeModifierSlot.ARMOR).build())
+                            .attributeModifiers(AttributeModifiersComponent.builder().add(EntityAttributes.GENERIC_MOVEMENT_SPEED, new EntityAttributeModifier(Identifier.of(AdventureMod.MOD_ID, "speed_modifier"), 1, EntityAttributeModifier.Operation.ADD_MULTIPLIED_TOTAL), AttributeModifierSlot.ARMOR).build())
             ),
             "leaf_helmet"
     );
@@ -29,7 +29,7 @@ public class ModItem {
                     ArmorItem.Type.CHESTPLATE,
                     new Item.Settings()
                             .maxDamage(ArmorItem.Type.CHESTPLATE.getMaxDamage(LEAF_ARMOR_DURABILITY_MULTIPLIER))
-                            .attributeModifiers(AttributeModifiersComponent.builder().add(EntityAttributes.GENERIC_MOVEMENT_SPEED, new EntityAttributeModifier(Identifier.of(AdventureMod.MOD_ID, "speed_modifier"), 5, EntityAttributeModifier.Operation.ADD_VALUE), AttributeModifierSlot.ARMOR).build())
+                            .attributeModifiers(AttributeModifiersComponent.builder().add(EntityAttributes.GENERIC_MOVEMENT_SPEED, new EntityAttributeModifier(Identifier.of(AdventureMod.MOD_ID, "speed_modifier"), 1, EntityAttributeModifier.Operation.ADD_MULTIPLIED_TOTAL), AttributeModifierSlot.ARMOR).build())
             ),
             "leaf_chestplate"
     );
@@ -39,7 +39,7 @@ public class ModItem {
                     ArmorItem.Type.LEGGINGS,
                     new Item.Settings()
                             .maxDamage(ArmorItem.Type.LEGGINGS.getMaxDamage(LEAF_ARMOR_DURABILITY_MULTIPLIER))
-                            .attributeModifiers(AttributeModifiersComponent.builder().add(EntityAttributes.GENERIC_MOVEMENT_SPEED, new EntityAttributeModifier(Identifier.of(AdventureMod.MOD_ID, "speed_modifier"), 5, EntityAttributeModifier.Operation.ADD_VALUE), AttributeModifierSlot.ARMOR).build())
+                            .attributeModifiers(AttributeModifiersComponent.builder().add(EntityAttributes.GENERIC_MOVEMENT_SPEED, new EntityAttributeModifier(Identifier.of(AdventureMod.MOD_ID, "speed_modifier"), 1, EntityAttributeModifier.Operation.ADD_MULTIPLIED_TOTAL), AttributeModifierSlot.ARMOR).build())
             ),
             "leaf_leggings"
     );
@@ -49,7 +49,7 @@ public class ModItem {
                     ArmorItem.Type.BOOTS,
                     new Item.Settings()
                             .maxDamage(ArmorItem.Type.BOOTS.getMaxDamage(LEAF_ARMOR_DURABILITY_MULTIPLIER))
-                            .attributeModifiers(AttributeModifiersComponent.builder().add(EntityAttributes.GENERIC_MOVEMENT_SPEED, new EntityAttributeModifier(Identifier.of(AdventureMod.MOD_ID, "speed_modifier"), 5, EntityAttributeModifier.Operation.ADD_VALUE), AttributeModifierSlot.ARMOR).build())
+                            .attributeModifiers(AttributeModifiersComponent.builder().add(EntityAttributes.GENERIC_MOVEMENT_SPEED, new EntityAttributeModifier(Identifier.of(AdventureMod.MOD_ID, "speed_modifier"), 1, EntityAttributeModifier.Operation.ADD_MULTIPLIED_TOTAL), AttributeModifierSlot.ARMOR).build())
             ),
             "leaf_boots"
     );

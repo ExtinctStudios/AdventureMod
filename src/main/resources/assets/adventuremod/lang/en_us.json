@@ -1,8 +1,8 @@
 {
   "itemgroup.adventuremod.default": "Adventure Mod Default",
   "entity.adventuremod.mossling": "Mossling",
-  "item.adventuremod.leaf_helmet": "Leaf Helmet",
-  "item.adventuremod.leaf_chestplate": "Leaf Chestplate",
+  "item.adventuremod.leaf_helmet": "Leaf Hood",
+  "item.adventuremod.leaf_chestplate": "Leaf Cloak",
   "item.adventuremod.leaf_leggings": "Leaf Leggings",
   "item.adventuremod.leaf_boots": "Leaf Boots"
 }
