@@ -6,6 +6,7 @@ import net.minecraft.component.type.AttributeModifiersComponent;
 import net.minecraft.entity.attribute.EntityAttributeModifier;
 import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.item.ArmorItem;
+import net.minecraft.item.BowItem;
 import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
@@ -54,7 +55,7 @@ public class ModItem {
             "leaf_boots"
     );
 
-    public static final Item STEELEAF_BOW = register(new Item(new Item.Settings()), "leaf_bow");
+    public static final Item STEELEAF_BOW = register(new BowItem(new Item.Settings().maxDamage(20)), "leaf_bow");
 
     public static final Item STEELEAF_INGOT = register(new Item(new Item.Settings()), "steeleaf_ingot");
 

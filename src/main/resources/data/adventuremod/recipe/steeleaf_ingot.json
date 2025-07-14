@@ -6,7 +6,7 @@
       "item": "minecraft:iron_ingot"
     },
     "2": {
-      "item": "minecraft:oak_leaves"
+      "tag": "minecraft:leaves"
     }
   },
   "pattern": [
