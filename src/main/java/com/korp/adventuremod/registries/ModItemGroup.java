@@ -20,6 +20,8 @@ public class ModItemGroup {
                         entries.add(ModItem.LEAF_CHESTPLATE);
                         entries.add(ModItem.LEAF_LEGGINGS);
                         entries.add(ModItem.LEAF_BOOTS);
+
+                        entries.add(ModItem.STEELEAF_INGOT);
                     }))
                     .build()
     );

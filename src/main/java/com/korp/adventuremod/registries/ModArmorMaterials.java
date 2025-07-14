@@ -28,7 +28,7 @@ public class ModArmorMaterials {
                     ArmorItem.Type.BOOTS, 3
             ),
             9,
-            SoundEvents.ITEM_ARMOR_EQUIP_IRON,
+            SoundEvents.ITEM_ARMOR_EQUIP_LEATHER,
             () -> Ingredient.fromTag(ItemTags.LEAVES),
             0f,
             0f,
