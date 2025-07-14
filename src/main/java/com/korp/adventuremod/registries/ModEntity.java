@@ -20,9 +20,8 @@ public class ModEntity {
     public static final EntityType<MosslingEntity> MOSSLING = Registry.register(
             Registries.ENTITY_TYPE,
             Identifier.of(AdventureMod.MOD_ID, "mossling"),
-            EntityType.Builder.create(MosslingEntity::new, SpawnGroup.CREATURE).dimensions(1f, 1f).build()
+            EntityType.Builder.create(MosslingEntity::new, SpawnGroup.CREATURE).dimensions(1.1F, 1.2F).build()
     );
-
 
     public static void initialize(){
         FabricDefaultAttributeRegistry.register(ModEntity.GOOBER, GooberEntity.createHostileAttributes());

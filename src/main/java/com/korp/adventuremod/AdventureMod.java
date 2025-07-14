@@ -1,10 +1,10 @@
 package com.korp.adventuremod;
 
-import com.korp.adventuremod.armor.ModArmorMaterials;
-import com.korp.adventuremod.entity.GooberEntity;
+import com.korp.adventuremod.registries.ModArmorMaterials;
 import com.korp.adventuremod.registries.ModEntity;
+import com.korp.adventuremod.registries.ModItem;
+import com.korp.adventuremod.registries.ModItemGroup;
 import net.fabricmc.api.ModInitializer;
-import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
 
 public class AdventureMod implements ModInitializer {
 
@@ -13,7 +13,8 @@ public class AdventureMod implements ModInitializer {
     @Override
     public void onInitialize() {
         ModEntity.initialize();
-
-        ModArmorMaterials.init();
+        ModItem.initialize();
+        ModItemGroup.initialize();
+        ModArmorMaterials.initialize();
     }
 }
