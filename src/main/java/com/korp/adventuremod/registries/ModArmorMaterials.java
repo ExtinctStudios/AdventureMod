@@ -19,8 +19,24 @@ import java.util.function.Supplier;
 public class ModArmorMaterials {
     public static void initialize(){};
 
-    public static RegistryEntry<ArmorMaterial> LEAF_ARMOR = registerMaterial(
+    public static RegistryEntry<ArmorMaterial> LEAF = registerMaterial(
             "leaf",
+            Map.of(
+                    ArmorItem.Type.HELMET, 3,
+                    ArmorItem.Type.CHESTPLATE, 3,
+                    ArmorItem.Type.LEGGINGS, 3,
+                    ArmorItem.Type.BOOTS, 3
+            ),
+            9,
+            SoundEvents.ITEM_ARMOR_EQUIP_LEATHER,
+            () -> Ingredient.fromTag(ItemTags.LEAVES),
+            0f,
+            0f,
+            false
+    );
+
+    public static RegistryEntry<ArmorMaterial> BLOODSTONE = registerMaterial(
+            "bloodstone",
             Map.of(
                     ArmorItem.Type.HELMET, 3,
                     ArmorItem.Type.CHESTPLATE, 3,

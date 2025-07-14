@@ -8,6 +8,7 @@ import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.item.ArmorItem;
 import net.minecraft.item.BowItem;
 import net.minecraft.item.Item;
+import net.minecraft.item.SwordItem;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
@@ -16,7 +17,7 @@ public class ModItem {
     public static final int LEAF_ARMOR_DURABILITY_MULTIPLIER = 15;
     public static final Item LEAF_HELMET = register(
             new ArmorItem(
-                    ModArmorMaterials.LEAF_ARMOR,
+                    ModArmorMaterials.LEAF,
                     ArmorItem.Type.HELMET,
                     new Item.Settings()
                             .maxDamage(ArmorItem.Type.HELMET.getMaxDamage(LEAF_ARMOR_DURABILITY_MULTIPLIER))
@@ -26,7 +27,7 @@ public class ModItem {
     );
     public static final Item LEAF_CHESTPLATE = register(
             new ArmorItem(
-                    ModArmorMaterials.LEAF_ARMOR,
+                    ModArmorMaterials.LEAF,
                     ArmorItem.Type.CHESTPLATE,
                     new Item.Settings()
                             .maxDamage(ArmorItem.Type.CHESTPLATE.getMaxDamage(LEAF_ARMOR_DURABILITY_MULTIPLIER))
@@ -36,7 +37,7 @@ public class ModItem {
     );
     public static final Item LEAF_LEGGINGS = register(
             new ArmorItem(
-                    ModArmorMaterials.LEAF_ARMOR,
+                    ModArmorMaterials.LEAF,
                     ArmorItem.Type.LEGGINGS,
                     new Item.Settings()
                             .maxDamage(ArmorItem.Type.LEGGINGS.getMaxDamage(LEAF_ARMOR_DURABILITY_MULTIPLIER))
@@ -46,7 +47,7 @@ public class ModItem {
     );
     public static final Item LEAF_BOOTS = register(
             new ArmorItem(
-                    ModArmorMaterials.LEAF_ARMOR,
+                    ModArmorMaterials.LEAF,
                     ArmorItem.Type.BOOTS,
                     new Item.Settings()
                             .maxDamage(ArmorItem.Type.BOOTS.getMaxDamage(LEAF_ARMOR_DURABILITY_MULTIPLIER))
@@ -55,9 +56,53 @@ public class ModItem {
             "leaf_boots"
     );
 
-    public static final Item STEELEAF_BOW = register(new BowItem(new Item.Settings().maxDamage(20)), "leaf_bow");
+    public static final int BLOOD_STONE_DURABILITY_MULTIPLIER = 15;
+    public static final Item BLOODSTONE_HELMET = register(
+            new ArmorItem(
+                    ModArmorMaterials.LEAF,
+                    ArmorItem.Type.HELMET,
+                    new Item.Settings()
+                            .maxDamage(ArmorItem.Type.HELMET.getMaxDamage(BLOOD_STONE_DURABILITY_MULTIPLIER))
+                            .attributeModifiers(AttributeModifiersComponent.builder().build())
+            ),
+            "bloodstone_helmet"
+    );
+    public static final Item BLOODSTONE_CHESTPLATE = register(
+            new ArmorItem(
+                    ModArmorMaterials.LEAF,
+                    ArmorItem.Type.CHESTPLATE,
+                    new Item.Settings()
+                            .maxDamage(ArmorItem.Type.CHESTPLATE.getMaxDamage(BLOOD_STONE_DURABILITY_MULTIPLIER))
+                            .attributeModifiers(AttributeModifiersComponent.builder().build())
+            ),
+            "bloodstone_chestplate"
+    );
+    public static final Item BLOODSTONE_LEGGINGS = register(
+            new ArmorItem(
+                    ModArmorMaterials.LEAF,
+                    ArmorItem.Type.LEGGINGS,
+                    new Item.Settings()
+                            .maxDamage(ArmorItem.Type.LEGGINGS.getMaxDamage(BLOOD_STONE_DURABILITY_MULTIPLIER))
+                            .attributeModifiers(AttributeModifiersComponent.builder().build())
+            ),
+            "bloodstone_leggings"
+    );
+    public static final Item BLOODSTONE_BOOTS = register(
+            new ArmorItem(
+                    ModArmorMaterials.LEAF,
+                    ArmorItem.Type.BOOTS,
+                    new Item.Settings()
+                            .maxDamage(ArmorItem.Type.BOOTS.getMaxDamage(BLOOD_STONE_DURABILITY_MULTIPLIER))
+                            .attributeModifiers(AttributeModifiersComponent.builder().build())
+            ),
+            "bloodstone_boots"
+    );
 
-    public static final Item STEELEAF_INGOT = register(new Item(new Item.Settings()), "steeleaf_ingot");
+    public static final Item STEELEAF_BOW = register(new BowItem(new Item.Settings().maxDamage(20)), "leaf_bow");
+    public static final Item BLOOD_STONE_SWORD = register(new SwordItem(ModToolMaterials.BLOOD_STONE, new Item.Settings().maxDamage(20)), "bloodstone_sword");
+
+    public static final Item LEAF_INGOT = register(new Item(new Item.Settings()), "leaf_ingot");
+    public static final Item BLOODSTONE = register(new Item(new Item.Settings()), "bloodstone");
 
     public static void initialize(){}
 

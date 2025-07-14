@@ -1,10 +1,22 @@
 {
   "itemgroup.adventuremod.default": "Adventure Mod Default",
   "entity.adventuremod.mossling": "Mossling",
+
+  "item.adventuremod.leaf_ingot": "Steeleaf Ingot",
+
   "item.adventuremod.leaf_helmet": "Steeleaf Hood",
   "item.adventuremod.leaf_chestplate": "Steeleaf Cloak",
   "item.adventuremod.leaf_leggings": "Steeleaf Leggings",
   "item.adventuremod.leaf_boots": "Steeleaf Boots",
-  "item.adventuremod.steeleaf_ingot": "Steeleaf Ingot",
-  "item.adventuremod.leaf_bow": "Steeleaf Bow"
+
+  "item.adventuremod.leaf_bow": "Steeleaf Bow",
+
+  "item.adventuremod.bloodstone": "Bloodstone",
+
+  "item.adventuremod.bloodstone_helmet": "Bloodstone Helmet",
+  "item.adventuremod.bloodstone_chestplate": "Bloodstone Chestplate",
+  "item.adventuremod.bloodstone_leggings": "Bloodstone Leggings",
+  "item.adventuremod.bloodstone_boots": "Bloodstone Boots",
+
+  "item.adventuremod.bloodstone_sword": "Bloodstone Sword"
 }

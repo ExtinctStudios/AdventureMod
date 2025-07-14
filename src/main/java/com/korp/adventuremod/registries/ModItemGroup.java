@@ -12,17 +12,26 @@ import net.minecraft.util.Identifier;
 public class ModItemGroup {
     public static final ItemGroup DEFAULT = Registry.register(Registries.ITEM_GROUP,
             Identifier.of(AdventureMod.MOD_ID, "default"),
-            FabricItemGroup.builder().icon(() -> new ItemStack(ModItem.STEELEAF_INGOT))
+            FabricItemGroup.builder().icon(() -> new ItemStack(ModItem.LEAF_INGOT))
                     .displayName(Text.translatable("itemgroup.adventuremod.default"))
                     .entries(((displayContext, entries) -> {
+                        entries.add(ModItem.LEAF_INGOT);
+
                         entries.add(ModItem.LEAF_HELMET);
                         entries.add(ModItem.LEAF_CHESTPLATE);
                         entries.add(ModItem.LEAF_LEGGINGS);
                         entries.add(ModItem.LEAF_BOOTS);
 
-                        entries.add(ModItem.STEELEAF_INGOT);
-
                         entries.add(ModItem.STEELEAF_BOW);
+
+                        entries.add(ModItem.BLOODSTONE);
+
+                        entries.add(ModItem.BLOODSTONE_HELMET);
+                        entries.add(ModItem.BLOODSTONE_CHESTPLATE);
+                        entries.add(ModItem.BLOODSTONE_LEGGINGS);
+                        entries.add(ModItem.BLOODSTONE_BOOTS);
+
+                        entries.add(ModItem.BLOOD_STONE_SWORD);
                     }))
                     .build()
     );
