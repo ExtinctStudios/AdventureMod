@@ -54,6 +54,8 @@ public class ModItem {
             "leaf_boots"
     );
 
+    public static final Item STEELEAF_BOW = register(new Item(new Item.Settings()), "leaf_bow");
+
     public static final Item STEELEAF_INGOT = register(new Item(new Item.Settings()), "steeleaf_ingot");
 
     public static void initialize(){}
