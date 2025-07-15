@@ -15,6 +15,8 @@ public class ModItemGroup {
             FabricItemGroup.builder().icon(() -> new ItemStack(ModItem.LEAF_INGOT))
                     .displayName(Text.translatable("itemgroup.adventuremod.default"))
                     .entries(((displayContext, entries) -> {
+                        entries.add(ModItem.IRON_ROD);
+
                         entries.add(ModItem.LEAF_INGOT);
 
                         entries.add(ModItem.LEAF_HELMET);

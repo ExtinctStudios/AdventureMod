@@ -60,7 +60,7 @@ public class ModItem {
     public static final int BLOOD_STONE_DURABILITY_MULTIPLIER = 15;
     public static final Item BLOODSTONE_HELMET = register(
             new ArmorItem(
-                    ModArmorMaterials.LEAF,
+                    ModArmorMaterials.BLOODSTONE,
                     ArmorItem.Type.HELMET,
                     new Item.Settings()
                             .maxDamage(ArmorItem.Type.HELMET.getMaxDamage(BLOOD_STONE_DURABILITY_MULTIPLIER))
@@ -70,7 +70,7 @@ public class ModItem {
     );
     public static final Item BLOODSTONE_CHESTPLATE = register(
             new ArmorItem(
-                    ModArmorMaterials.LEAF,
+                    ModArmorMaterials.BLOODSTONE,
                     ArmorItem.Type.CHESTPLATE,
                     new Item.Settings()
                             .maxDamage(ArmorItem.Type.CHESTPLATE.getMaxDamage(BLOOD_STONE_DURABILITY_MULTIPLIER))
@@ -80,7 +80,7 @@ public class ModItem {
     );
     public static final Item BLOODSTONE_LEGGINGS = register(
             new ArmorItem(
-                    ModArmorMaterials.LEAF,
+                    ModArmorMaterials.BLOODSTONE,
                     ArmorItem.Type.LEGGINGS,
                     new Item.Settings()
                             .maxDamage(ArmorItem.Type.LEGGINGS.getMaxDamage(BLOOD_STONE_DURABILITY_MULTIPLIER))
@@ -90,7 +90,7 @@ public class ModItem {
     );
     public static final Item BLOODSTONE_BOOTS = register(
             new ArmorItem(
-                    ModArmorMaterials.LEAF,
+                    ModArmorMaterials.BLOODSTONE,
                     ArmorItem.Type.BOOTS,
                     new Item.Settings()
                             .maxDamage(ArmorItem.Type.BOOTS.getMaxDamage(BLOOD_STONE_DURABILITY_MULTIPLIER))
@@ -101,25 +101,27 @@ public class ModItem {
 
     public static final Item BLOOD_STONE_SWORD = register(
             new SwordItem(ModToolMaterials.BLOOD_STONE, new Item.Settings()
-                    .attributeModifiers(SwordItem.createAttributeModifiers(ModToolMaterials.BLOOD_STONE, 8, -2))), "bloodstone_sword");
+                    .attributeModifiers(SwordItem.createAttributeModifiers(ModToolMaterials.BLOOD_STONE, 3, -2.6f))), "bloodstone_sword");
 
     public static final Item BLOOD_STONE_PICKAXE = register(
             new PickaxeItem(ModToolMaterials.BLOOD_STONE, new Item.Settings()
-                    .attributeModifiers(PickaxeItem.createAttributeModifiers(ModToolMaterials.BLOOD_STONE, 8, -2))), "bloodstone_pickaxe");
+                    .attributeModifiers(PickaxeItem.createAttributeModifiers(ModToolMaterials.BLOOD_STONE, 1, -3f))), "bloodstone_pickaxe");
 
     public static final Item BLOOD_STONE_AXE = register(
             new AxeItem(ModToolMaterials.BLOOD_STONE, new Item.Settings()
-                    .attributeModifiers(AxeItem.createAttributeModifiers(ModToolMaterials.BLOOD_STONE, 8, -2))), "bloodstone_axe");
+                    .attributeModifiers(AxeItem.createAttributeModifiers(ModToolMaterials.BLOOD_STONE, 5.5f, -3.4f))), "bloodstone_axe");
 
     public static final Item BLOOD_STONE_SHOVEL = register(
             new ShovelItem(ModToolMaterials.BLOOD_STONE, new Item.Settings()
-                    .attributeModifiers(ShovelItem.createAttributeModifiers(ModToolMaterials.BLOOD_STONE, 8, -2))), "bloodstone_shovel");
+                    .attributeModifiers(ShovelItem.createAttributeModifiers(ModToolMaterials.BLOOD_STONE, 1.5f, -3.0f))), "bloodstone_shovel");
 
     public static final Item BLOOD_STONE_HOE = register(
             new HoeItem(ModToolMaterials.BLOOD_STONE, new Item.Settings()
-                    .attributeModifiers(HoeItem.createAttributeModifiers(ModToolMaterials.BLOOD_STONE, 8, -2))), "bloodstone_hoe");
+                    .attributeModifiers(HoeItem.createAttributeModifiers(ModToolMaterials.BLOOD_STONE, -3.0f, -0.2f))), "bloodstone_hoe");
 
     public static final Item BLOODSTONE = register(new Item(new Item.Settings()), "bloodstone");
+
+    public static final Item IRON_ROD = register(new Item(new Item.Settings()), "iron_rod");
 
     public static void initialize(){}
 

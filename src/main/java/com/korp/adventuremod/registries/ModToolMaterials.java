@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.function.Supplier;
 
 public enum ModToolMaterials implements ToolMaterial {
-    BLOOD_STONE(BlockTags.INCORRECT_FOR_DIAMOND_TOOL, 874, 8.5F, 3F, 10, () -> Ingredient.ofItems(new ItemConvertible[]{ModItem.BLOODSTONE}));
+    BLOOD_STONE(BlockTags.INCORRECT_FOR_DIAMOND_TOOL, 874, 7.8f, 3f, 10, () -> Ingredient.ofItems(new ItemConvertible[]{ModItem.BLOODSTONE}));
 
     private final TagKey<Block> inverseTag;
     private final int itemDurability;

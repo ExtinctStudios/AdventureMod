@@ -22,15 +22,16 @@ public class ModArmorMaterials {
     public static RegistryEntry<ArmorMaterial> LEAF = registerMaterial(
             "leaf",
             Map.of(
-                    ArmorItem.Type.HELMET, 3,
-                    ArmorItem.Type.CHESTPLATE, 3,
-                    ArmorItem.Type.LEGGINGS, 3,
-                    ArmorItem.Type.BOOTS, 3
+                    ArmorItem.Type.BOOTS, 2,
+                    ArmorItem.Type.LEGGINGS, 6,
+                    ArmorItem.Type.CHESTPLATE, 7,
+                    ArmorItem.Type.HELMET, 2,
+                    ArmorItem.Type.BODY, 9
             ),
-            9,
+            10,
             SoundEvents.ITEM_ARMOR_EQUIP_LEATHER,
             () -> Ingredient.fromTag(ItemTags.LEAVES),
-            0f,
+            2.0f,
             0f,
             false
     );
@@ -38,16 +39,17 @@ public class ModArmorMaterials {
     public static RegistryEntry<ArmorMaterial> BLOODSTONE = registerMaterial(
             "bloodstone",
             Map.of(
+                    ArmorItem.Type.BOOTS, 3,
+                    ArmorItem.Type.LEGGINGS, 6,
+                    ArmorItem.Type.CHESTPLATE, 8,
                     ArmorItem.Type.HELMET, 3,
-                    ArmorItem.Type.CHESTPLATE, 3,
-                    ArmorItem.Type.LEGGINGS, 3,
-                    ArmorItem.Type.BOOTS, 3
+                    ArmorItem.Type.BODY, 11
             ),
-            9,
-            SoundEvents.ITEM_ARMOR_EQUIP_GOLD,
+            10,
+            SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE,
             () -> Ingredient.ofItems(ModItem.BLOODSTONE),
-            0f,
-            0f,
+            2.0f,
+            0.1f,
             false
     );
 
