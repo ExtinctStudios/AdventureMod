@@ -2,6 +2,8 @@
   "itemgroup.adventuremod.default": "Adventure Mod Default",
   "entity.adventuremod.mossling": "Mossling",
 
+  "block.adventuremod.bloodstone_block": "Bloodstone",
+
   "item.adventuremod.leaf_ingot": "Steeleaf Ingot",
 
   "item.adventuremod.leaf_helmet": "Steeleaf Hood",
@@ -12,6 +14,7 @@
   "item.adventuremod.leaf_bow": "Steeleaf Bow",
 
   "item.adventuremod.bloodstone": "Bloodstone",
+  "item.adventuremod.bloodstone_empty": "Bloodstone Empty",
 
   "item.adventuremod.bloodstone_helmet": "Bloodstone Helmet",
   "item.adventuremod.bloodstone_chestplate": "Bloodstone Chestplate",

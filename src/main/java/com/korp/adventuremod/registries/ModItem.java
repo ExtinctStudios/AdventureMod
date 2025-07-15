@@ -120,6 +120,7 @@ public class ModItem {
                     .attributeModifiers(HoeItem.createAttributeModifiers(ModToolMaterials.BLOOD_STONE, -3.0f, -0.2f))), "bloodstone_hoe");
 
     public static final Item BLOODSTONE = register(new Item(new Item.Settings()), "bloodstone");
+    public static final Item BLOODSTONE_EMPTY = register(new Item(new Item.Settings()), "bloodstone_empty");
 
     public static final Item IRON_ROD = register(new Item(new Item.Settings()), "iron_rod");
 
