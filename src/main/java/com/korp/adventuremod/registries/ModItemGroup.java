@@ -32,6 +32,10 @@ public class ModItemGroup {
                         entries.add(ModItem.BLOODSTONE_BOOTS);
 
                         entries.add(ModItem.BLOOD_STONE_SWORD);
+                        entries.add(ModItem.BLOOD_STONE_PICKAXE);
+                        entries.add(ModItem.BLOOD_STONE_AXE);
+                        entries.add(ModItem.BLOOD_STONE_SHOVEL);
+                        entries.add(ModItem.BLOOD_STONE_HOE);
                     }))
                     .build()
     );

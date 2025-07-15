@@ -5,15 +5,14 @@ import net.minecraft.component.type.AttributeModifierSlot;
 import net.minecraft.component.type.AttributeModifiersComponent;
 import net.minecraft.entity.attribute.EntityAttributeModifier;
 import net.minecraft.entity.attribute.EntityAttributes;
-import net.minecraft.item.ArmorItem;
-import net.minecraft.item.BowItem;
-import net.minecraft.item.Item;
-import net.minecraft.item.SwordItem;
+import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
 public class ModItem {
+    public static final Item LEAF_INGOT = register(new Item(new Item.Settings()), "leaf_ingot");
+
     public static final int LEAF_ARMOR_DURABILITY_MULTIPLIER = 15;
     public static final Item LEAF_HELMET = register(
             new ArmorItem(
@@ -55,6 +54,8 @@ public class ModItem {
             ),
             "leaf_boots"
     );
+
+    public static final Item STEELEAF_BOW = register(new BowItem(new Item.Settings().maxDamage(20)), "leaf_bow");
 
     public static final int BLOOD_STONE_DURABILITY_MULTIPLIER = 15;
     public static final Item BLOODSTONE_HELMET = register(
@@ -98,10 +99,26 @@ public class ModItem {
             "bloodstone_boots"
     );
 
-    public static final Item STEELEAF_BOW = register(new BowItem(new Item.Settings().maxDamage(20)), "leaf_bow");
-    public static final Item BLOOD_STONE_SWORD = register(new SwordItem(ModToolMaterials.BLOOD_STONE, new Item.Settings().maxDamage(20)), "bloodstone_sword");
+    public static final Item BLOOD_STONE_SWORD = register(
+            new SwordItem(ModToolMaterials.BLOOD_STONE, new Item.Settings()
+                    .attributeModifiers(SwordItem.createAttributeModifiers(ModToolMaterials.BLOOD_STONE, 8, -2))), "bloodstone_sword");
 
-    public static final Item LEAF_INGOT = register(new Item(new Item.Settings()), "leaf_ingot");
+    public static final Item BLOOD_STONE_PICKAXE = register(
+            new PickaxeItem(ModToolMaterials.BLOOD_STONE, new Item.Settings()
+                    .attributeModifiers(PickaxeItem.createAttributeModifiers(ModToolMaterials.BLOOD_STONE, 8, -2))), "bloodstone_pickaxe");
+
+    public static final Item BLOOD_STONE_AXE = register(
+            new AxeItem(ModToolMaterials.BLOOD_STONE, new Item.Settings()
+                    .attributeModifiers(AxeItem.createAttributeModifiers(ModToolMaterials.BLOOD_STONE, 8, -2))), "bloodstone_axe");
+
+    public static final Item BLOOD_STONE_SHOVEL = register(
+            new ShovelItem(ModToolMaterials.BLOOD_STONE, new Item.Settings()
+                    .attributeModifiers(ShovelItem.createAttributeModifiers(ModToolMaterials.BLOOD_STONE, 8, -2))), "bloodstone_shovel");
+
+    public static final Item BLOOD_STONE_HOE = register(
+            new HoeItem(ModToolMaterials.BLOOD_STONE, new Item.Settings()
+                    .attributeModifiers(HoeItem.createAttributeModifiers(ModToolMaterials.BLOOD_STONE, 8, -2))), "bloodstone_hoe");
+
     public static final Item BLOODSTONE = register(new Item(new Item.Settings()), "bloodstone");
 
     public static void initialize(){}
