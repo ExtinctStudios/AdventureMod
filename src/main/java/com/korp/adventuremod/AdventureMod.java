@@ -43,8 +43,6 @@ public class AdventureMod implements ModInitializer {
                     emptyBloodstoneStack = inventory.getStack(emptyBloodstoneSlot);
                     emptyBloodstoneStack.decrement(1);
 
-                    System.out.println("Empty stack slot: " + emptyBloodstoneSlot);
-
                     // Ifall spelaren redan har åtminstone 1 stack bloodstone och stacken inte är full lägg till ett föremål i stacken,
                     // annars, ifall det finns åtminstone 1 tom slot skapa en ny stack med 1 bloodstone
                     // annars, skapa en bloodstone item entity
