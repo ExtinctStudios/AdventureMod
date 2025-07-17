@@ -15,7 +15,8 @@ public class ModItemGroups {
             FabricItemGroup.builder().icon(() -> new ItemStack(ModItems.LEAF_INGOT))
                     .displayName(Text.translatable("itemgroup.adventuremod.default"))
                     .entries(((displayContext, entries) -> {
-                        entries.add(ModBlocks.BLOODSTONE_BLOCK);
+                        entries.add(ModBlocks.MEAT);
+                        entries.add(ModBlocks.BLOODSTONE_ORE);
 
                         entries.add(ModItems.IRON_ROD);
 

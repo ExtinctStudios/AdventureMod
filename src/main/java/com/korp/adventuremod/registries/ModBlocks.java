@@ -13,7 +13,16 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.math.intprovider.UniformIntProvider;
 
 public class ModBlocks {
-    public static final Block BLOODSTONE_BLOCK = registerBlock("bloodstone_block", new ExperienceDroppingBlock(UniformIntProvider.create(2, 5), AbstractBlock.Settings.create().strength(4.0f).requiresTool().sounds(BlockSoundGroup.DEEPSLATE)));
+    public static final Block MEAT = registerBlock("meat",
+            new Block(AbstractBlock.Settings.create()
+                    .strength(1.0f)
+                    .sounds(BlockSoundGroup.WET_SPONGE)));
+
+    public static final Block BLOODSTONE_ORE = registerBlock("bloodstone_ore",
+            new ExperienceDroppingBlock(UniformIntProvider.create(2, 5), AbstractBlock.Settings.create()
+                    .strength(4.0f)
+                    .requiresTool()
+                    .sounds(BlockSoundGroup.BONE)));
 
     public static Block registerBlock(String id, Block block){
         registerBlockItem(id, block);

@@ -25,7 +25,8 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
 
     @Override
     public void generate() {
-        addDrop(ModBlocks.BLOODSTONE_BLOCK, multipleOreDrops(ModBlocks.BLOODSTONE_BLOCK, ModItems.BLOODSTONE_EMPTY, 1, 2));
+        addDrop(ModBlocks.MEAT);
+        addDrop(ModBlocks.BLOODSTONE_ORE, multipleOreDrops(ModBlocks.BLOODSTONE_ORE, ModItems.BLOODSTONE_EMPTY, 1, 2));
     }
 
     public LootTable.Builder multipleOreDrops(Block drop, Item item, int min, int max) {

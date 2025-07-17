@@ -2,7 +2,8 @@
   "itemgroup.adventuremod.default": "Adventure Mod Default",
   "entity.adventuremod.mossling": "Mossling",
 
-  "block.adventuremod.bloodstone_block": "Bloodstone",
+  "block.adventuremod.meat": "Meat",
+  "block.adventuremod.bloodstone_ore": "Bloodstone Ore",
 
   "item.adventuremod.leaf_ingot": "Steeleaf Ingot",
 

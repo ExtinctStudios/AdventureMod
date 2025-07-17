@@ -1,6 +1,7 @@
 package com.korp.adventuremod.datagen;
 
 import com.korp.adventuremod.registries.ModBlocks;
+import com.korp.adventuremod.util.ModTags;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.minecraft.registry.RegistryWrapper;
@@ -16,9 +17,10 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
     @Override
     protected void configure(RegistryWrapper.WrapperLookup wrapperLookup) {
         getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE)
-                .add(ModBlocks.BLOODSTONE_BLOCK);
+                .add(ModBlocks.MEAT)
+                .add(ModBlocks.BLOODSTONE_ORE);
 
         getOrCreateTagBuilder(BlockTags.NEEDS_IRON_TOOL)
-                .add(ModBlocks.BLOODSTONE_BLOCK);
+                .add(ModBlocks.BLOODSTONE_ORE);
     }
 }

@@ -1,6 +1,7 @@
 package com.korp.adventuremod;
 
 import com.korp.adventuremod.registries.*;
+import com.korp.adventuremod.world.gen.ModWorldGeneration;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents;
 import net.minecraft.entity.ItemEntity;
@@ -21,6 +22,7 @@ public class AdventureMod implements ModInitializer {
         ModItems.initialize();
         ModItemGroups.initialize();
         ModArmorMaterials.initialize();
+        ModWorldGeneration.initialize();
 
         RegisterConvertBloodstoneOnKillEvent();
     }
