@@ -1,0 +1,6 @@
+{
+  "parent": "adventuremod:item/leaf_bow",
+  "textures": {
+    "layer0": "adventuremod:item/leaf_bow_pulling_1"
+  }
+}

@@ -55,7 +55,7 @@ public class ModItems {
             "leaf_boots"
     );
 
-    public static final Item LEAF_BOW = register(new BowItem(new Item.Settings().maxDamage(20)), "leaf_bow");
+    public static final Item LEAF_BOW = register(new BowItem(new Item.Settings().maxDamage(584)), "leaf_bow");
 
     public static final int BLOOD_STONE_DURABILITY_MULTIPLIER = 15;
     public static final Item BLOODSTONE_HELMET = register(

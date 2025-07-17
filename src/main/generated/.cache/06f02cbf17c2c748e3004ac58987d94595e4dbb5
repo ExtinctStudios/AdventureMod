@@ -1,4 +1,4 @@
-// 1.21.1	2025-07-17T12:24:51.7781593	AdventureMod/Model Definitions
+// 1.21.1	2025-07-17T14:43:56.6583703	AdventureMod/Model Definitions
 65e640b8e9b211a8353052f7215f551f443c978c assets\adventuremod\models\item\bloodstone_boots_emerald_trim.json
 ac8ddd6ae953351472ba3790e14b3028b2374ff0 assets\adventuremod\models\item\bloodstone_leggings_iron_trim.json
 0e3b4e48626bcc6537ef065be5b4e5539d4db667 assets\adventuremod\models\item\leaf_boots_amethyst_trim.json
@@ -12,8 +12,8 @@ b077b2eb6ae229ee91446e51d9123a3af09ab042 assets\adventuremod\models\item\bloodst
 3989dc9b84ad2f5a8f3a2245fcb2e0cafb071c73 assets\adventuremod\models\item\bloodstone_hoe.json
 2259cb4cac07dee6f9b0667e84f097f7d5a0ec61 assets\adventuremod\models\item\bloodstone_leggings_gold_trim.json
 2d3332ec9c5e4ecc903096c54768eaf3d851b987 assets\adventuremod\models\item\bloodstone_helmet_lapis_trim.json
-7e01029706e96959891914e937f4d0f4ef553665 assets\adventuremod\models\item\leaf_chestplate.json
 875945a1466eb29b2db6a49d82f0f119a80f1639 assets\adventuremod\models\item\bloodstone_chestplate_redstone_trim.json
+7e01029706e96959891914e937f4d0f4ef553665 assets\adventuremod\models\item\leaf_chestplate.json
 38893b52c1660d9860da4452dde53dfa702f59a2 assets\adventuremod\models\item\bloodstone_leggings.json
 8644ece967eb8bcc981c912add5fc75f7ea42bfe assets\adventuremod\models\item\bloodstone_chestplate_netherite_trim.json
 9494a1d99c0d5714d528eff4c0c1c0727b9beaf0 assets\adventuremod\models\item\bloodstone_leggings_quartz_trim.json
@@ -91,7 +91,6 @@ c4605d4e01da3e6606b1078e923c09615b3d60b2 assets\adventuremod\models\block\meat.j
 ffc9df9cd8d24574b000f357f929d556b4b9ef52 assets\adventuremod\models\item\leaf_boots_diamond_trim.json
 1aba96b93dfa3045b75eb45d7f4963128cbccb93 assets\adventuremod\models\item\bloodstone_helmet.json
 cf73ee1cd72316e30a3183ce4d65d3ffa2a1f12a assets\adventuremod\models\item\bloodstone_leggings_copper_trim.json
-6084a02dad2a98c434279c44e52d3cd6cd64aaa3 assets\adventuremod\models\item\leaf_bow.json
 485da17cb661442e1d9c592a21415bd70710de19 assets\adventuremod\models\item\leaf_boots_iron_trim.json
 31088f7ca59b7d2a02325499dd7a59377a4b021f assets\adventuremod\models\item\leaf_ingot.json
 c33a7a50d0c7b11f4594be209decac9ad750d7cb assets\adventuremod\models\item\iron_rod.json

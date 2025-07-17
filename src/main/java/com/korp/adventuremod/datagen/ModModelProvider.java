@@ -31,7 +31,8 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.registerArmor((ArmorItem) ModItems.LEAF_LEGGINGS);
         itemModelGenerator.registerArmor((ArmorItem) ModItems.LEAF_BOOTS);
 
-        itemModelGenerator.register(ModItems.LEAF_BOW, Models.HANDHELD);
+        // Hanteras manuellt p.g.a ModelPredicates
+        //itemModelGenerator.register(ModItems.LEAF_BOW, Models.HANDHELD);
 
         itemModelGenerator.register(ModItems.BLOODSTONE_EMPTY, Models.GENERATED);
         itemModelGenerator.register(ModItems.BLOODSTONE, Models.GENERATED);
