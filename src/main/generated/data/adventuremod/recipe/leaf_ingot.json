@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "1": {
+      "item": "minecraft:iron_ingot"
+    },
+    "2": {
+      "tag": "adventuremod:leaves"
+    }
+  },
+  "pattern": [
+    "222",
+    "212",
+    "222"
+  ],
+  "result": {
+    "count": 1,
+    "id": "adventuremod:leaf_ingot"
+  }
+}

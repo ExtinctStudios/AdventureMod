@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "m": {
+      "item": "adventuremod:leaf_ingot"
+    },
+    "s": {
+      "item": "minecraft:string"
+    }
+  },
+  "pattern": [
+    "sm ",
+    "s m",
+    "sm "
+  ],
+  "result": {
+    "count": 1,
+    "id": "adventuremod:leaf_bow"
+  }
+}

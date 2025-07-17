@@ -26,7 +26,7 @@ public class ModItemGroup {
                         entries.add(ModItem.LEAF_LEGGINGS);
                         entries.add(ModItem.LEAF_BOOTS);
 
-                        entries.add(ModItem.STEELEAF_BOW);
+                        entries.add(ModItem.LEAF_BOW);
 
                         entries.add(ModItem.BLOODSTONE);
                         entries.add(ModItem.BLOODSTONE_EMPTY);
@@ -36,11 +36,11 @@ public class ModItemGroup {
                         entries.add(ModItem.BLOODSTONE_LEGGINGS);
                         entries.add(ModItem.BLOODSTONE_BOOTS);
 
-                        entries.add(ModItem.BLOOD_STONE_SWORD);
-                        entries.add(ModItem.BLOOD_STONE_PICKAXE);
-                        entries.add(ModItem.BLOOD_STONE_AXE);
-                        entries.add(ModItem.BLOOD_STONE_SHOVEL);
-                        entries.add(ModItem.BLOOD_STONE_HOE);
+                        entries.add(ModItem.BLOODSTONE_SWORD);
+                        entries.add(ModItem.BLOODSTONE_PICKAXE);
+                        entries.add(ModItem.BLOODSTONE_AXE);
+                        entries.add(ModItem.BLOODSTONE_SHOVEL);
+                        entries.add(ModItem.BLOODSTONE_HOE);
                     }))
                     .build()
     );

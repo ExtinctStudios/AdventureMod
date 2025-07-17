@@ -55,7 +55,7 @@ public class ModItem {
             "leaf_boots"
     );
 
-    public static final Item STEELEAF_BOW = register(new BowItem(new Item.Settings().maxDamage(20)), "leaf_bow");
+    public static final Item LEAF_BOW = register(new BowItem(new Item.Settings().maxDamage(20)), "leaf_bow");
 
     public static final int BLOOD_STONE_DURABILITY_MULTIPLIER = 15;
     public static final Item BLOODSTONE_HELMET = register(
@@ -99,23 +99,23 @@ public class ModItem {
             "bloodstone_boots"
     );
 
-    public static final Item BLOOD_STONE_SWORD = register(
+    public static final Item BLOODSTONE_SWORD = register(
             new SwordItem(ModToolMaterials.BLOOD_STONE, new Item.Settings()
                     .attributeModifiers(SwordItem.createAttributeModifiers(ModToolMaterials.BLOOD_STONE, 3, -2.6f))), "bloodstone_sword");
 
-    public static final Item BLOOD_STONE_PICKAXE = register(
+    public static final Item BLOODSTONE_PICKAXE = register(
             new PickaxeItem(ModToolMaterials.BLOOD_STONE, new Item.Settings()
                     .attributeModifiers(PickaxeItem.createAttributeModifiers(ModToolMaterials.BLOOD_STONE, 1, -3f))), "bloodstone_pickaxe");
 
-    public static final Item BLOOD_STONE_AXE = register(
+    public static final Item BLOODSTONE_AXE = register(
             new AxeItem(ModToolMaterials.BLOOD_STONE, new Item.Settings()
                     .attributeModifiers(AxeItem.createAttributeModifiers(ModToolMaterials.BLOOD_STONE, 5.5f, -3.4f))), "bloodstone_axe");
 
-    public static final Item BLOOD_STONE_SHOVEL = register(
+    public static final Item BLOODSTONE_SHOVEL = register(
             new ShovelItem(ModToolMaterials.BLOOD_STONE, new Item.Settings()
                     .attributeModifiers(ShovelItem.createAttributeModifiers(ModToolMaterials.BLOOD_STONE, 1.5f, -3.0f))), "bloodstone_shovel");
 
-    public static final Item BLOOD_STONE_HOE = register(
+    public static final Item BLOODSTONE_HOE = register(
             new HoeItem(ModToolMaterials.BLOOD_STONE, new Item.Settings()
                     .attributeModifiers(HoeItem.createAttributeModifiers(ModToolMaterials.BLOOD_STONE, -3.0f, -0.2f))), "bloodstone_hoe");
 
