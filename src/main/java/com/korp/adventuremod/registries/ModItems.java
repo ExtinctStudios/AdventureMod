@@ -10,7 +10,7 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
-public class ModItem {
+public class ModItems {
     public static final Item LEAF_INGOT = register(new Item(new Item.Settings()), "leaf_ingot");
 
     public static final int LEAF_ARMOR_DURABILITY_MULTIPLIER = 15;

@@ -1,7 +1,7 @@
 package com.korp.adventuremod.datagen;
 
 import com.korp.adventuremod.registries.ModBlocks;
-import com.korp.adventuremod.registries.ModItem;
+import com.korp.adventuremod.registries.ModItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
 import net.minecraft.block.Block;
@@ -25,7 +25,7 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
 
     @Override
     public void generate() {
-        addDrop(ModBlocks.BLOODSTONE_BLOCK, multipleOreDrops(ModBlocks.BLOODSTONE_BLOCK, ModItem.BLOODSTONE_EMPTY, 1, 2));
+        addDrop(ModBlocks.BLOODSTONE_BLOCK, multipleOreDrops(ModBlocks.BLOODSTONE_BLOCK, ModItems.BLOODSTONE_EMPTY, 1, 2));
     }
 
     public LootTable.Builder multipleOreDrops(Block drop, Item item, int min, int max) {

@@ -10,7 +10,7 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
-public class ModEntity {
+public class ModEntities {
     public static final EntityType<GooberEntity> GOOBER = Registry.register(
             Registries.ENTITY_TYPE,
             Identifier.of(AdventureMod.MOD_ID, "goober"),
@@ -24,7 +24,7 @@ public class ModEntity {
     );
 
     public static void initialize(){
-        FabricDefaultAttributeRegistry.register(ModEntity.GOOBER, GooberEntity.createHostileAttributes());
-        FabricDefaultAttributeRegistry.register(ModEntity.MOSSLING, MosslingEntity.createHostileAttributes());
+        FabricDefaultAttributeRegistry.register(ModEntities.GOOBER, GooberEntity.createHostileAttributes());
+        FabricDefaultAttributeRegistry.register(ModEntities.MOSSLING, MosslingEntity.createHostileAttributes());
     }
 }

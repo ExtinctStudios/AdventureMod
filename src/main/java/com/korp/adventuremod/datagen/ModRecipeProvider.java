@@ -1,6 +1,6 @@
 package com.korp.adventuremod.datagen;
 
-import com.korp.adventuremod.registries.ModItem;
+import com.korp.adventuremod.registries.ModItems;
 import com.korp.adventuremod.util.ModTags;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
@@ -20,14 +20,14 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
     @Override
     public void generate(RecipeExporter recipeExporter) {
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItem.IRON_ROD)
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.IRON_ROD)
                 .input('#', Items.IRON_INGOT)
                 .criterion(hasItem(Items.IRON_INGOT), conditionsFromItem(Items.IRON_INGOT))
                 .pattern("#")
                 .pattern("#")
                 .offerTo(recipeExporter);
 
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItem.LEAF_INGOT)
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.LEAF_INGOT)
                 .input('1', Items.IRON_INGOT)
                 .input('2', ModTags.Items.LEAVES)
                 .criterion(hasItem(Items.IRON_INGOT), conditionsFromItem(Items.IRON_INGOT))
@@ -37,38 +37,38 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .offerTo(recipeExporter);
 
         offerArmorRecipe(
-                ModItem.LEAF_INGOT,
-                ModItem.LEAF_HELMET,
-                ModItem.LEAF_CHESTPLATE,
-                ModItem.LEAF_LEGGINGS,
-                ModItem.LEAF_BOOTS,
+                ModItems.LEAF_INGOT,
+                ModItems.LEAF_HELMET,
+                ModItems.LEAF_CHESTPLATE,
+                ModItems.LEAF_LEGGINGS,
+                ModItems.LEAF_BOOTS,
                 recipeExporter
         );
 
         offerBowRecipe(
-                ModItem.LEAF_INGOT,
+                ModItems.LEAF_INGOT,
                 Items.STRING,
-                ModItem.LEAF_BOW,
+                ModItems.LEAF_BOW,
                 recipeExporter
         );
 
         offerArmorRecipe(
-                ModItem.BLOODSTONE,
-                ModItem.BLOODSTONE_HELMET,
-                ModItem.BLOODSTONE_CHESTPLATE,
-                ModItem.BLOODSTONE_LEGGINGS,
-                ModItem.BLOODSTONE_BOOTS,
+                ModItems.BLOODSTONE,
+                ModItems.BLOODSTONE_HELMET,
+                ModItems.BLOODSTONE_CHESTPLATE,
+                ModItems.BLOODSTONE_LEGGINGS,
+                ModItems.BLOODSTONE_BOOTS,
                 recipeExporter
         );
 
         offerEquipmentRecipe(
-                ModItem.BLOODSTONE,
-                ModItem.IRON_ROD,
-                ModItem.BLOODSTONE_SWORD,
-                ModItem.BLOODSTONE_PICKAXE,
-                ModItem.BLOODSTONE_AXE,
-                ModItem.BLOODSTONE_SHOVEL,
-                ModItem.BLOODSTONE_HOE,
+                ModItems.BLOODSTONE,
+                ModItems.IRON_ROD,
+                ModItems.BLOODSTONE_SWORD,
+                ModItems.BLOODSTONE_PICKAXE,
+                ModItems.BLOODSTONE_AXE,
+                ModItems.BLOODSTONE_SHOVEL,
+                ModItems.BLOODSTONE_HOE,
                 recipeExporter
         );
     }

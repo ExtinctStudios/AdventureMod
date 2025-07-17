@@ -47,7 +47,7 @@ public class ModArmorMaterials {
             ),
             10,
             SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE,
-            () -> Ingredient.ofItems(ModItem.BLOODSTONE),
+            () -> Ingredient.ofItems(ModItems.BLOODSTONE),
             2.0f,
             0.1f,
             false

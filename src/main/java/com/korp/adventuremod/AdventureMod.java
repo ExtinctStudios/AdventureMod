@@ -4,10 +4,8 @@ import com.korp.adventuremod.registries.*;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents;
 import net.minecraft.entity.ItemEntity;
-import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
@@ -18,10 +16,10 @@ public class AdventureMod implements ModInitializer {
 
     @Override
     public void onInitialize() {
-        ModEntity.initialize();
+        ModEntities.initialize();
         ModBlocks.initialize();
-        ModItem.initialize();
-        ModItemGroup.initialize();
+        ModItems.initialize();
+        ModItemGroups.initialize();
         ModArmorMaterials.initialize();
 
         RegisterConvertBloodstoneOnKillEvent();
@@ -37,7 +35,7 @@ public class AdventureMod implements ModInitializer {
                 PlayerInventory inventory = player.getInventory();
 
                 // Ifall spelaren har åtminstone 1 stack adventuremod:bloodstone_empty
-                ItemStack emptyBloodstoneStack = new ItemStack(ModItem.BLOODSTONE_EMPTY);
+                ItemStack emptyBloodstoneStack = new ItemStack(ModItems.BLOODSTONE_EMPTY);
                 if(inventory.contains(emptyBloodstoneStack)){
                     int emptyBloodstoneSlot = inventory.getSlotWithStack(emptyBloodstoneStack);
                     emptyBloodstoneStack = inventory.getStack(emptyBloodstoneSlot);
@@ -46,7 +44,7 @@ public class AdventureMod implements ModInitializer {
                     // Ifall spelaren redan har åtminstone 1 stack bloodstone och stacken inte är full lägg till ett föremål i stacken,
                     // annars, ifall det finns åtminstone 1 tom slot skapa en ny stack med 1 bloodstone
                     // annars, skapa en bloodstone item entity
-                    ItemStack bloodstoneStack = new ItemStack(ModItem.BLOODSTONE);
+                    ItemStack bloodstoneStack = new ItemStack(ModItems.BLOODSTONE);
                     if(inventory.contains(bloodstoneStack) && inventory.getStack(inventory.getSlotWithStack(bloodstoneStack)).getCount() < 64){
                         int bloodstoneSlot = inventory.getSlotWithStack(bloodstoneStack);
                         bloodstoneStack = inventory.getStack(bloodstoneSlot);
