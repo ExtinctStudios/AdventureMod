@@ -18,13 +18,24 @@ import net.minecraft.world.gen.placementmodifier.PlacementModifier;
 import java.util.List;
 
 public class ModPlacedFeatures {
-    public static final RegistryKey<PlacedFeature> BLOODSTONE_ORE_KEY = registerKey("bloodstone_ore");
+    public static final RegistryKey<PlacedFeature> BLOODSTONE_ORE_MEDIUM = registerKey("bloodstone_ore_medium");
+    public static final RegistryKey<PlacedFeature> BLOODSTONE_ORE_SMALL = registerKey("bloodstone_ore_small");
 
     public static void bootstrap(Registerable<PlacedFeature> context){
         var configuredFeatures = context.getRegistryLookup(RegistryKeys.CONFIGURED_FEATURE);
 
-        register(context, BLOODSTONE_ORE_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.BLOODSTONE_ORE_KEY),
-                ModOrePlacement.modifiersWithCount(12, HeightRangePlacementModifier.trapezoid(YOffset.fixed(-40), YOffset.fixed(67)))
+        register(
+                context,
+                BLOODSTONE_ORE_MEDIUM,
+                configuredFeatures.getOrThrow(ModConfiguredFeatures.BLOODSTONE_ORE_MEDIUM),
+                ModOrePlacement.modifiersWithCount(16, HeightRangePlacementModifier.trapezoid(YOffset.fixed(-42), YOffset.fixed(67)))
+        );
+
+        register(
+                context,
+                BLOODSTONE_ORE_SMALL,
+                configuredFeatures.getOrThrow(ModConfiguredFeatures.BLOODSTONE_ORE_SMALL),
+                ModOrePlacement.modifiersWithCount(14, HeightRangePlacementModifier.uniform(YOffset.getBottom(), YOffset.fixed(74)))
         );
     }
 

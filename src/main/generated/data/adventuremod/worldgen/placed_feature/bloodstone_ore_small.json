@@ -1,0 +1,21 @@
+{
+  "feature": "adventuremod:bloodstone_ore_small",
+  "placement": [
+    {
+      "type": "minecraft:count",
+      "count": 14
+    },
+    {
+      "type": "minecraft:height_range",
+      "height": {
+        "type": "minecraft:uniform",
+        "max_inclusive": {
+          "absolute": 74
+        },
+        "min_inclusive": {
+          "above_bottom": 0
+        }
+      }
+    }
+  ]
+}

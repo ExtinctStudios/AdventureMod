@@ -17,16 +17,20 @@ import net.minecraft.world.gen.feature.OreFeatureConfig;
 import java.util.List;
 
 public class ModConfiguredFeatures {
-    public static final RegistryKey<ConfiguredFeature<?, ?>> BLOODSTONE_ORE_KEY = registerKey("bloodstone_ore");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> BLOODSTONE_ORE_MEDIUM = registerKey("bloodstone_ore_medium");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> BLOODSTONE_ORE_SMALL = registerKey("bloodstone_ore_small");
 
     public static void bootstrap(Registerable<ConfiguredFeature<?, ?>>  context){
         RuleTest stoneReplaceable = new TagMatchRuleTest(BlockTags.STONE_ORE_REPLACEABLES);
+        RuleTest deepslateReplaceable = new TagMatchRuleTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES);
 
         List<OreFeatureConfig.Target> bloodstoneOre = List.of(
-                OreFeatureConfig.createTarget(stoneReplaceable, ModBlocks.BLOODSTONE_ORE.getDefaultState())
+                OreFeatureConfig.createTarget(stoneReplaceable, ModBlocks.BLOODSTONE_ORE.getDefaultState()),
+                OreFeatureConfig.createTarget(deepslateReplaceable, ModBlocks.BLOODSTONE_ORE.getDefaultState())
         );
 
-        register(context, BLOODSTONE_ORE_KEY, Feature.ORE, new OreFeatureConfig(bloodstoneOre, 4));
+        register(context, BLOODSTONE_ORE_MEDIUM, Feature.ORE, new OreFeatureConfig(bloodstoneOre, 4));
+        register(context, BLOODSTONE_ORE_SMALL, Feature.ORE, new OreFeatureConfig(bloodstoneOre, 2));
     }
 
     public static RegistryKey<ConfiguredFeature<?, ?>> registerKey(String id){

@@ -10,6 +10,11 @@ public class ModOreGeneration {
         BiomeModifications.addFeature(
                 BiomeSelectors.foundInOverworld(),
                 GenerationStep.Feature.UNDERGROUND_ORES,
-                ModPlacedFeatures.BLOODSTONE_ORE_KEY);
+                ModPlacedFeatures.BLOODSTONE_ORE_MEDIUM);
+
+        BiomeModifications.addFeature(
+                BiomeSelectors.foundInOverworld(),
+                GenerationStep.Feature.UNDERGROUND_ORES,
+                ModPlacedFeatures.BLOODSTONE_ORE_SMALL);
     }
 }

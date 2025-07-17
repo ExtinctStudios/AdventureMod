@@ -1,3 +1,5 @@
-// 1.21.1	2025-07-17T11:29:37.2638638	AdventureMod/
-c090f6645c047d149dc43e253ecffcc81cf3d6a7 data\adventuremod\worldgen\configured_feature\bloodstone_ore.json
-931f8e1c35da464b1b8e5f12b4ac6b7188e0882e data\adventuremod\worldgen\placed_feature\bloodstone_ore.json
+// 1.21.1	2025-07-17T12:24:51.782689	AdventureMod/
+6fe7664886f28f9177deb5c9c3d1fa3441fc8cc9 data\adventuremod\worldgen\configured_feature\bloodstone_ore_small.json
+3277d8e164f56b79fd00163873da406bf1e8558d data\adventuremod\worldgen\placed_feature\bloodstone_ore_small.json
+631a674b5e19855fbebfeb04393dba43b700280e data\adventuremod\worldgen\placed_feature\bloodstone_ore_medium.json
+6ee27e2fb73edbc64a571eeee69281784fe6b9e1 data\adventuremod\worldgen\configured_feature\bloodstone_ore_medium.json
