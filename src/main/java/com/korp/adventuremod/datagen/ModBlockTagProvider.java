@@ -1,7 +1,6 @@
 package com.korp.adventuremod.datagen;
 
 import com.korp.adventuremod.registries.ModBlocks;
-import com.korp.adventuremod.util.ModTags;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.minecraft.registry.RegistryWrapper;

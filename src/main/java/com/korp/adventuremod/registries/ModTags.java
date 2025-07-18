@@ -1,4 +1,4 @@
-package com.korp.adventuremod.util;
+package com.korp.adventuremod.registries;
 
 import com.korp.adventuremod.AdventureMod;
 import net.minecraft.block.Block;

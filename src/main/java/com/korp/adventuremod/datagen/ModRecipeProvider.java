@@ -1,7 +1,7 @@
 package com.korp.adventuremod.datagen;
 
 import com.korp.adventuremod.registries.ModItems;
-import com.korp.adventuremod.util.ModTags;
+import com.korp.adventuremod.registries.ModTags;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.data.server.recipe.RecipeExporter;
@@ -102,6 +102,24 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 ModItems.BLOODSTONE_HOE,
                 recipeExporter
         );
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.MAGIC_MIRROR)
+                .input('1', Items.IRON_INGOT)
+                .input('2', Items.COMPASS)
+                .input('3', ModItems.WARP_ESSENCE)
+                .input('4', ModItems.IRON_ROD)
+                .criterion(hasItem(ModItems.WARP_ESSENCE), conditionsFromItem(ModItems.WARP_ESSENCE))
+                .pattern("121")
+                .pattern("131")
+                .pattern(" 4 ")
+                .offerTo(recipeExporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.WARP_ESSENCE)
+                .input('#', Items.ENDER_PEARL)
+                .criterion(hasItem(Items.ENDER_PEARL), conditionsFromItem(Items.ENDER_PEARL))
+                .pattern("##")
+                .pattern("##")
+                .offerTo(recipeExporter);
     }
 
     static void offerArmorRecipe(

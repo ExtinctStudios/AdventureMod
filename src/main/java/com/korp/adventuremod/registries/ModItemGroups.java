@@ -55,6 +55,10 @@ public class ModItemGroups {
                         entries.add(ModItems.BLOODSTONE_AXE);
                         entries.add(ModItems.BLOODSTONE_SHOVEL);
                         entries.add(ModItems.BLOODSTONE_HOE);
+
+                        entries.add(ModItems.MAGIC_MIRROR);
+
+                        entries.add(ModItems.WARP_ESSENCE);
                     }))
                     .build()
     );

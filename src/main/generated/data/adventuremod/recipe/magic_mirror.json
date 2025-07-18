@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "1": {
+      "item": "minecraft:iron_ingot"
+    },
+    "2": {
+      "item": "minecraft:compass"
+    },
+    "3": {
+      "item": "adventuremod:warp_essence"
+    },
+    "4": {
+      "item": "adventuremod:iron_rod"
+    }
+  },
+  "pattern": [
+    "121",
+    "131",
+    " 4 "
+  ],
+  "result": {
+    "count": 1,
+    "id": "adventuremod:magic_mirror"
+  }
+}

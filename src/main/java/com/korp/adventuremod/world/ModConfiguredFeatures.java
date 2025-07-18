@@ -24,6 +24,10 @@ public class ModConfiguredFeatures {
         RuleTest stoneReplaceable = new TagMatchRuleTest(BlockTags.STONE_ORE_REPLACEABLES);
         RuleTest deepslateReplaceable = new TagMatchRuleTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES);
 
+        List<OreFeatureConfig.Target> bloodstone = List.of(
+                OreFeatureConfig.createTarget(stoneReplaceable, ModBlocks.MEAT.getDefaultState())
+        );
+
         List<OreFeatureConfig.Target> bloodstoneOre = List.of(
                 OreFeatureConfig.createTarget(stoneReplaceable, ModBlocks.BLOODSTONE_ORE.getDefaultState()),
                 OreFeatureConfig.createTarget(deepslateReplaceable, ModBlocks.BLOODSTONE_ORE.getDefaultState())

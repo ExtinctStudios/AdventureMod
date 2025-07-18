@@ -60,5 +60,9 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.BLOODSTONE_AXE, Models.HANDHELD);
         itemModelGenerator.register(ModItems.BLOODSTONE_SHOVEL, Models.HANDHELD);
         itemModelGenerator.register(ModItems.BLOODSTONE_HOE, Models.HANDHELD);
+
+        itemModelGenerator.register(ModItems.MAGIC_MIRROR, Models.HANDHELD);
+
+        itemModelGenerator.register(ModItems.WARP_ESSENCE, Models.GENERATED);
     }
 }

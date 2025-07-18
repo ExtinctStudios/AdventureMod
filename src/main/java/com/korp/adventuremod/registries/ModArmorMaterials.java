@@ -31,9 +31,9 @@ public class ModArmorMaterials {
                     ArmorItem.Type.HELMET, 1,
                     ArmorItem.Type.BODY, 3
             ),
-            9,
+            10,
             SoundEvents.ITEM_ARMOR_EQUIP_LEATHER,
-            () -> Ingredient.ofItems(Items.CACTUS),
+            () -> Ingredient.ofItems(ModItems.CLOTH),
             0.0f,
             0.0f,
             false
