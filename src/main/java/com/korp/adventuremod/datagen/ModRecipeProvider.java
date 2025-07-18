@@ -10,6 +10,7 @@ import net.minecraft.item.ItemConvertible;
 import net.minecraft.item.Items;
 import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.registry.RegistryWrapper;
+import net.minecraft.registry.tag.ItemTags;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -27,16 +28,15 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .pattern("#")
                 .offerTo(recipeExporter);
 
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.CLOTH,1)
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.CLOTH,2)
                 .input('#', Items.STRING)
                 .criterion(hasItem(Items.STRING), conditionsFromItem(Items.STRING))
-                .pattern("#")
                 .pattern("#")
                 .offerTo(recipeExporter);
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.LEAF_INGOT)
                 .input('1', Items.IRON_INGOT)
-                .input('2', ModTags.Items.LEAVES)
+                .input('2', ItemTags.LEAVES)
                 .criterion(hasItem(Items.IRON_INGOT), conditionsFromItem(Items.IRON_INGOT))
                 .pattern("222")
                 .pattern("212")

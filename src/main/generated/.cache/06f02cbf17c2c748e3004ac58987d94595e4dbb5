@@ -1,4 +1,4 @@
-// 1.21.1	2025-07-18T22:10:04.062493	AdventureMod/Model Definitions
+// 1.21.1	2025-07-18T23:28:52.1559294	AdventureMod/Model Definitions
 7bced3c9329b2029c2522c0968759a4e0070b687 assets\adventuremod\models\item\cloth_boots_netherite_trim.json
 0e3b4e48626bcc6537ef065be5b4e5539d4db667 assets\adventuremod\models\item\leaf_boots_amethyst_trim.json
 0dcfabb242a2496b91305eca4530492180d89700 assets\adventuremod\models\item\cactus_helmet_gold_trim.json
@@ -87,8 +87,8 @@ daeda13763efc7e57a2689aff96dd580c62a0e1d assets\adventuremod\models\item\leaf_bo
 64c055b74e48f0b9abb936e0bfaaa4d5c066e87b assets\adventuremod\models\item\leaf_leggings_lapis_trim.json
 c4605d4e01da3e6606b1078e923c09615b3d60b2 assets\adventuremod\models\block\meat.json
 ffc9df9cd8d24574b000f357f929d556b4b9ef52 assets\adventuremod\models\item\leaf_boots_diamond_trim.json
-1aba96b93dfa3045b75eb45d7f4963128cbccb93 assets\adventuremod\models\item\bloodstone_helmet.json
 7691b62a804ca2a0a6846da034d32419ed82a785 assets\adventuremod\models\item\cactus_helmet_iron_trim.json
+1aba96b93dfa3045b75eb45d7f4963128cbccb93 assets\adventuremod\models\item\bloodstone_helmet.json
 cf73ee1cd72316e30a3183ce4d65d3ffa2a1f12a assets\adventuremod\models\item\bloodstone_leggings_copper_trim.json
 485da17cb661442e1d9c592a21415bd70710de19 assets\adventuremod\models\item\leaf_boots_iron_trim.json
 5b88f7d7acfe0b7f7eac64eb8a69c076a60c3a04 assets\adventuremod\models\item\bloodstone_helmet_redstone_trim.json

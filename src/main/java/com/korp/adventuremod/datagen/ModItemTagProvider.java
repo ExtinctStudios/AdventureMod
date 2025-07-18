@@ -15,16 +15,6 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
 
     @Override
     protected void configure(RegistryWrapper.WrapperLookup wrapperLookup) {
-        getOrCreateTagBuilder(ModTags.Items.LEAVES)
-                .add(Items.ACACIA_LEAVES)
-                .add(Items.AZALEA_LEAVES)
-                .add(Items.BIRCH_LEAVES)
-                .add(Items.CHERRY_LEAVES)
-                .add(Items.DARK_OAK_LEAVES)
-                .add(Items.FLOWERING_AZALEA_LEAVES)
-                .add(Items.JUNGLE_LEAVES)
-                .add(Items.MANGROVE_LEAVES)
-                .add(Items.OAK_LEAVES)
-                .add(Items.SPRUCE_LEAVES);
+
     }
 }

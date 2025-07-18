@@ -215,9 +215,9 @@ public class ModItems {
     public static final Item BLOODSTONE = register(new Item(new Item.Settings()), "bloodstone");
     public static final Item BLOODSTONE_EMPTY = register(new Item(new Item.Settings()), "bloodstone_empty");
 
-    public static final Item MAGIC_MIRROR = register(new MagicMirrorItem(new Item.Settings()), "magic_mirror");
+    public static final Item MAGIC_MIRROR = register(new MagicMirrorItem(new Item.Settings().maxCount(1)), "magic_mirror");
 
-    public static final Item WARP_ESSENCE = register(new Item(new Item.Settings()), "warp_essence");
+    public static final Item WARP_ESSENCE = register(new Item(new Item.Settings().maxCount(1)), "warp_essence");
 
     public static void initialize(){}
 
