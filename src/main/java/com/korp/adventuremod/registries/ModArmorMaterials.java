@@ -3,6 +3,7 @@ package com.korp.adventuremod.registries;
 import com.korp.adventuremod.AdventureMod;
 import net.minecraft.item.ArmorItem;
 import net.minecraft.item.ArmorMaterial;
+import net.minecraft.item.Items;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
@@ -19,11 +20,29 @@ import java.util.function.Supplier;
 public class ModArmorMaterials {
     public static void initialize(){};
 
+    public static RegistryEntry<ArmorMaterial> CACTUS = registerMaterial(
+            "cactus",
+            Map.of(
+                    ArmorItem.Type.BOOTS, 1,
+                    ArmorItem.Type.LEGGINGS, 3,
+                    ArmorItem.Type.CHESTPLATE, 5,
+                    ArmorItem.Type.HELMET, 2,
+                    ArmorItem.Type.BODY, 7
+            ),
+            9,
+            SoundEvents.ITEM_ARMOR_EQUIP_LEATHER,
+            () -> Ingredient.ofItems(Items.CACTUS),
+            0.0f,
+            0.0f,
+            false
+    );
+
+
     public static RegistryEntry<ArmorMaterial> LEAF = registerMaterial(
             "leaf",
             Map.of(
                     ArmorItem.Type.BOOTS, 2,
-                    ArmorItem.Type.LEGGINGS, 6,
+                    ArmorItem.Type.LEGGINGS, 5,
                     ArmorItem.Type.CHESTPLATE, 7,
                     ArmorItem.Type.HELMET, 2,
                     ArmorItem.Type.BODY, 9

@@ -11,6 +11,53 @@ import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
 public class ModItems {
+    public static final int CACTUS_ARMOR_DURABILITY_MULTIPLIER = 15;
+    public static final Item CACTUS_HELMET = register(
+            new ArmorItem(
+                    ModArmorMaterials.CACTUS,
+                    ArmorItem.Type.HELMET,
+                    new Item.Settings()
+                            .maxDamage(ArmorItem.Type.HELMET.getMaxDamage(CACTUS_ARMOR_DURABILITY_MULTIPLIER))
+                            .attributeModifiers(AttributeModifiersComponent.builder().build())
+            ),
+            "cactus_helmet"
+    );
+    public static final Item CACTUS_CHESTPLATE = register(
+            new ArmorItem(
+                    ModArmorMaterials.CACTUS,
+                    ArmorItem.Type.CHESTPLATE,
+                    new Item.Settings()
+                            .maxDamage(ArmorItem.Type.CHESTPLATE.getMaxDamage(CACTUS_ARMOR_DURABILITY_MULTIPLIER))
+                            .attributeModifiers(AttributeModifiersComponent.builder().build())
+            ),
+            "cactus_chestplate"
+    );
+    public static final Item CACTUS_LEGGINGS = register(
+            new ArmorItem(
+                    ModArmorMaterials.CACTUS,
+                    ArmorItem.Type.LEGGINGS,
+                    new Item.Settings()
+                            .maxDamage(ArmorItem.Type.LEGGINGS.getMaxDamage(CACTUS_ARMOR_DURABILITY_MULTIPLIER))
+                            .attributeModifiers(AttributeModifiersComponent.builder().build())
+            ),
+            "cactus_leggings"
+    );
+    public static final Item CACTUS_BOOTS = register(
+            new ArmorItem(
+                    ModArmorMaterials.CACTUS,
+                    ArmorItem.Type.BOOTS,
+                    new Item.Settings()
+                            .maxDamage(ArmorItem.Type.BOOTS.getMaxDamage(CACTUS_ARMOR_DURABILITY_MULTIPLIER))
+                            .attributeModifiers(AttributeModifiersComponent.builder().build())
+            ),
+            "cactus_boots"
+    );
+
+    public static final Item CACTUS_SWORD = register(
+            new SwordItem(ModToolMaterials.CACTUS, new Item.Settings()
+                    .attributeModifiers(SwordItem.createAttributeModifiers(ModToolMaterials.CACTUS, 3, -2.4f))), "cactus_sword");
+
+
     public static final Item LEAF_INGOT = register(new Item(new Item.Settings()), "leaf_ingot");
 
     public static final int LEAF_ARMOR_DURABILITY_MULTIPLIER = 15;
@@ -101,7 +148,7 @@ public class ModItems {
 
     public static final Item BLOODSTONE_SWORD = register(
             new SwordItem(ModToolMaterials.BLOOD_STONE, new Item.Settings()
-                    .attributeModifiers(SwordItem.createAttributeModifiers(ModToolMaterials.BLOOD_STONE, 3, -2.6f))), "bloodstone_sword");
+                    .attributeModifiers(SwordItem.createAttributeModifiers(ModToolMaterials.BLOOD_STONE, 3, -2.4f))), "bloodstone_sword");
 
     public static final Item BLOODSTONE_PICKAXE = register(
             new PickaxeItem(ModToolMaterials.BLOOD_STONE, new Item.Settings()

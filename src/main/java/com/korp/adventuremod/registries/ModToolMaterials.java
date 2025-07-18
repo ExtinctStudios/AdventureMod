@@ -3,6 +3,7 @@ package com.korp.adventuremod.registries;
 import com.google.common.base.Suppliers;
 import net.minecraft.block.Block;
 import net.minecraft.item.ItemConvertible;
+import net.minecraft.item.Items;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.registry.tag.BlockTags;
@@ -12,7 +13,8 @@ import java.util.Objects;
 import java.util.function.Supplier;
 
 public enum ModToolMaterials implements ToolMaterial {
-    BLOOD_STONE(BlockTags.INCORRECT_FOR_DIAMOND_TOOL, 874, 7.8f, 3f, 10, () -> Ingredient.ofItems(new ItemConvertible[]{ModItems.BLOODSTONE}));
+    BLOOD_STONE(BlockTags.INCORRECT_FOR_DIAMOND_TOOL, 1561, 8.0F, 3.0F, 10, () -> Ingredient.ofItems(ModItems.BLOODSTONE)),
+    CACTUS(BlockTags.INCORRECT_FOR_IRON_TOOL, 250, 6.0F, 2.0F, 14, () -> Ingredient.ofItems(Items.CACTUS));
 
     private final TagKey<Block> inverseTag;
     private final int itemDurability;

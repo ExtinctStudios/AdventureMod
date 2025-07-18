@@ -20,7 +20,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
     @Override
     public void generate(RecipeExporter recipeExporter) {
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.IRON_ROD)
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.IRON_ROD, 4)
                 .input('#', Items.IRON_INGOT)
                 .criterion(hasItem(Items.IRON_INGOT), conditionsFromItem(Items.IRON_INGOT))
                 .pattern("#")
@@ -35,6 +35,17 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .pattern("212")
                 .pattern("222")
                 .offerTo(recipeExporter);
+
+        offerArmorRecipe(
+                Items.CACTUS,
+                ModItems.CACTUS_HELMET,
+                ModItems.CACTUS_CHESTPLATE,
+                ModItems.CACTUS_LEGGINGS,
+                ModItems.CACTUS_BOOTS,
+                recipeExporter
+        );
+
+        offerSwordRecipe(Items.CACTUS, Items.STICK, ModItems.CACTUS_SWORD, recipeExporter);
 
         offerArmorRecipe(
                 ModItems.LEAF_INGOT,
@@ -117,14 +128,8 @@ public class ModRecipeProvider extends FabricRecipeProvider {
             ItemConvertible shovel,
             ItemConvertible hoe,
             RecipeExporter recipeExporter){
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, sword)
-                .input('m', material)
-                .input('s', stick)
-                .criterion(hasItem(material), conditionsFromItem(material))
-                .pattern("m")
-                .pattern("m")
-                .pattern("s")
-                .offerTo(recipeExporter);
+
+        offerSwordRecipe(material, stick, sword, recipeExporter);
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, pickaxe)
                 .input('m', material)
                 .input('s', stick)
@@ -156,6 +161,22 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .pattern(" mm")
                 .pattern(" s ")
                 .pattern(" s ")
+                .offerTo(recipeExporter);
+    }
+
+    static void offerSwordRecipe(
+            ItemConvertible material,
+            ItemConvertible stick,
+            ItemConvertible sword,
+            RecipeExporter recipeExporter
+    ){
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, sword)
+                .input('m', material)
+                .input('s', stick)
+                .criterion(hasItem(material), conditionsFromItem(material))
+                .pattern("m")
+                .pattern("m")
+                .pattern("s")
                 .offerTo(recipeExporter);
     }
 
