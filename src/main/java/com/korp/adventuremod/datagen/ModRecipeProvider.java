@@ -27,6 +27,13 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .pattern("#")
                 .offerTo(recipeExporter);
 
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.CLOTH,1)
+                .input('#', Items.STRING)
+                .criterion(hasItem(Items.STRING), conditionsFromItem(Items.STRING))
+                .pattern("#")
+                .pattern("#")
+                .offerTo(recipeExporter);
+
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.LEAF_INGOT)
                 .input('1', Items.IRON_INGOT)
                 .input('2', ModTags.Items.LEAVES)
@@ -35,6 +42,15 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .pattern("212")
                 .pattern("222")
                 .offerTo(recipeExporter);
+
+        offerArmorRecipe(
+                ModItems.CLOTH,
+                ModItems.CLOTH_HELMET,
+                ModItems.CLOTH_CHESTPLATE,
+                ModItems.CLOTH_LEGGINGS,
+                ModItems.CLOTH_BOOTS,
+                recipeExporter
+        );
 
         offerArmorRecipe(
                 Items.CACTUS,
@@ -47,8 +63,12 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
         offerSwordRecipe(Items.CACTUS, Items.STICK, ModItems.CACTUS_SWORD, recipeExporter);
 
-        offerArmorRecipe(
+        offerUpgradeableArmorRecipe(
                 ModItems.LEAF_INGOT,
+                ModItems.CLOTH_HELMET,
+                ModItems.CLOTH_CHESTPLATE,
+                ModItems.CLOTH_LEGGINGS,
+                ModItems.CLOTH_BOOTS,
                 ModItems.LEAF_HELMET,
                 ModItems.LEAF_CHESTPLATE,
                 ModItems.LEAF_LEGGINGS,
@@ -116,6 +136,52 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(hasItem(material), conditionsFromItem(material))
                 .pattern("# #")
                 .pattern("# #")
+                .offerTo(recipeExporter);
+    }
+
+    static void offerUpgradeableArmorRecipe(
+            ItemConvertible material,
+            ItemConvertible baseHelmet,
+            ItemConvertible baseChestplate,
+            ItemConvertible baseLeggings,
+            ItemConvertible baseBoots,
+            ItemConvertible helmet,
+            ItemConvertible chestplate,
+            ItemConvertible leggings,
+            ItemConvertible boots,
+            RecipeExporter recipeExporter
+    ) {
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, helmet)
+                .input('#', material)
+                .input('b', baseHelmet)
+                .criterion(hasItem(material), conditionsFromItem(material))
+                .pattern(" # ")
+                .pattern("#b#")
+                .pattern(" # ")
+                .offerTo(recipeExporter);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, chestplate)
+                .input('#', material)
+                .input('b', baseChestplate)
+                .criterion(hasItem(material), conditionsFromItem(material))
+                .pattern(" # ")
+                .pattern("#b#")
+                .pattern(" # ")
+                .offerTo(recipeExporter);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, leggings)
+                .input('#', material)
+                .input('b', baseLeggings)
+                .criterion(hasItem(material), conditionsFromItem(material))
+                .pattern(" # ")
+                .pattern("#b#")
+                .pattern(" # ")
+                .offerTo(recipeExporter);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, boots)
+                .input('#', material)
+                .input('b', baseBoots)
+                .criterion(hasItem(material), conditionsFromItem(material))
+                .pattern(" # ")
+                .pattern("#b#")
+                .pattern(" # ")
                 .offerTo(recipeExporter);
     }
 

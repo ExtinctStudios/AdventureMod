@@ -11,6 +11,51 @@ import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
 public class ModItems {
+    public static final Item IRON_ROD = register(new Item(new Item.Settings()), "iron_rod");
+    public static final Item CLOTH = register(new Item(new Item.Settings()), "cloth");
+
+    public static final int CLOTH_ARMOR_DURABILITY_MULTIPLIER = 15;
+    public static final Item CLOTH_HELMET = register(
+            new ArmorItem(
+                    ModArmorMaterials.CLOTH,
+                    ArmorItem.Type.HELMET,
+                    new Item.Settings()
+                            .maxDamage(ArmorItem.Type.HELMET.getMaxDamage(CLOTH_ARMOR_DURABILITY_MULTIPLIER))
+                            .attributeModifiers(AttributeModifiersComponent.builder().build())
+            ),
+            "cloth_helmet"
+    );
+    public static final Item CLOTH_CHESTPLATE = register(
+            new ArmorItem(
+                    ModArmorMaterials.CLOTH,
+                    ArmorItem.Type.CHESTPLATE,
+                    new Item.Settings()
+                            .maxDamage(ArmorItem.Type.CHESTPLATE.getMaxDamage(CLOTH_ARMOR_DURABILITY_MULTIPLIER))
+                            .attributeModifiers(AttributeModifiersComponent.builder().build())
+            ),
+            "cloth_chestplate"
+    );
+    public static final Item CLOTH_LEGGINGS = register(
+            new ArmorItem(
+                    ModArmorMaterials.CLOTH,
+                    ArmorItem.Type.LEGGINGS,
+                    new Item.Settings()
+                            .maxDamage(ArmorItem.Type.LEGGINGS.getMaxDamage(CLOTH_ARMOR_DURABILITY_MULTIPLIER))
+                            .attributeModifiers(AttributeModifiersComponent.builder().build())
+            ),
+            "cloth_leggings"
+    );
+    public static final Item CLOTH_BOOTS = register(
+            new ArmorItem(
+                    ModArmorMaterials.CLOTH,
+                    ArmorItem.Type.BOOTS,
+                    new Item.Settings()
+                            .maxDamage(ArmorItem.Type.BOOTS.getMaxDamage(CLOTH_ARMOR_DURABILITY_MULTIPLIER))
+                            .attributeModifiers(AttributeModifiersComponent.builder().build())
+            ),
+            "cloth_boots"
+    );
+
     public static final int CACTUS_ARMOR_DURABILITY_MULTIPLIER = 15;
     public static final Item CACTUS_HELMET = register(
             new ArmorItem(
@@ -168,8 +213,6 @@ public class ModItems {
 
     public static final Item BLOODSTONE = register(new Item(new Item.Settings()), "bloodstone");
     public static final Item BLOODSTONE_EMPTY = register(new Item(new Item.Settings()), "bloodstone_empty");
-
-    public static final Item IRON_ROD = register(new Item(new Item.Settings()), "iron_rod");
 
     public static void initialize(){}
 

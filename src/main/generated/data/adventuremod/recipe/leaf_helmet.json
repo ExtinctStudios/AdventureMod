@@ -4,11 +4,15 @@
   "key": {
     "#": {
       "item": "adventuremod:leaf_ingot"
+    },
+    "b": {
+      "item": "adventuremod:cloth_helmet"
     }
   },
   "pattern": [
-    "###",
-    "# #"
+    " # ",
+    "#b#",
+    " # "
   ],
   "result": {
     "count": 1,

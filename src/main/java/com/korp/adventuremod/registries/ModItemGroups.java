@@ -19,6 +19,12 @@ public class ModItemGroups {
                         entries.add(ModBlocks.BLOODSTONE_ORE);
 
                         entries.add(ModItems.IRON_ROD);
+                        entries.add(ModItems.CLOTH);
+
+                        entries.add(ModItems.CLOTH_HELMET);
+                        entries.add(ModItems.CLOTH_CHESTPLATE);
+                        entries.add(ModItems.CLOTH_LEGGINGS);
+                        entries.add(ModItems.CLOTH_BOOTS);
 
                         entries.add(ModItems.CACTUS_HELMET);
                         entries.add(ModItems.CACTUS_CHESTPLATE);

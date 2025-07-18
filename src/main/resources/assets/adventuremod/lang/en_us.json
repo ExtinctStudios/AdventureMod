@@ -5,10 +5,23 @@
   "block.adventuremod.meat": "Meat",
   "block.adventuremod.bloodstone_ore": "Bloodstone Ore",
 
+  "item.adventuremod.iron_rod": "Iron Rod",
+  "item.adventuremod.cloth": "Cloth",
+
+  "item.adventuremod.cloth_helmet": "Cloth Hood",
+  "item.adventuremod.cloth_chestplate": "Cloth Shirt",
+  "item.adventuremod.cloth_leggings": "Cloth Leggings",
+  "item.adventuremod.cloth_boots": "Cloth Shoes",
+
+  "item.adventuremod.cactus_helmet": "Cactus Helmet",
+  "item.adventuremod.cactus_chestplate": "Cactus Chestplate",
+  "item.adventuremod.cactus_leggings": "Cactus Leggings",
+  "item.adventuremod.cactus_boots": "Cactus Boots",
+
   "item.adventuremod.leaf_ingot": "Steeleaf Ingot",
 
-  "item.adventuremod.leaf_helmet": "Steeleaf Hood",
-  "item.adventuremod.leaf_chestplate": "Steeleaf Cloak",
+  "item.adventuremod.leaf_helmet": "Steeleaf Helmet",
+  "item.adventuremod.leaf_chestplate": "Steeleaf Chestplate",
   "item.adventuremod.leaf_leggings": "Steeleaf Leggings",
   "item.adventuremod.leaf_boots": "Steeleaf Boots",
 
@@ -26,7 +39,5 @@
   "item.adventuremod.bloodstone_pickaxe": "Bloodstone Pickaxe",
   "item.adventuremod.bloodstone_axe": "Bloodstone Axe",
   "item.adventuremod.bloodstone_shovel": "Bloodstone Shovel",
-  "item.adventuremod.bloodstone_hoe": "Bloodstone Hoe",
-
-  "item.adventuremod.iron_rod": "Iron Rod"
+  "item.adventuremod.bloodstone_hoe": "Bloodstone Hoe"
 }
