@@ -1,5 +1,6 @@
 package com.korp.adventuremod;
 
+import com.korp.adventuremod.entity.HuskEntity;
 import com.korp.adventuremod.registries.*;
 import com.korp.adventuremod.util.InventoryUtil;
 import com.korp.adventuremod.world.gen.ModWorldGeneration;
@@ -7,6 +8,7 @@ import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents;
 import net.fabricmc.fabric.api.entity.event.v1.ServerPlayerEvents;
 import net.fabricmc.fabric.api.event.player.UseEntityCallback;
+import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.ItemEntity;
 import net.minecraft.entity.damage.DamageSource;
@@ -42,6 +44,13 @@ public class AdventureMod implements ModInitializer {
         ModWorldGeneration.initialize();
         ModModelPredicates.initialize();
 
+        FabricDefaultAttributeRegistry.register(ModEntities.HUSK, HuskEntity.createAttributes());
+
+        RegisterHarvestWarpEssenceEvent();
+        RegisterConvertBloodstoneOnKillEvent();
+    }
+
+    static void RegisterHarvestWarpEssenceEvent(){
         UseEntityCallback.EVENT.register((
                 PlayerEntity player,
                 World world,
@@ -73,8 +82,6 @@ public class AdventureMod implements ModInitializer {
 
             return ActionResult.FAIL;
         });
-
-        RegisterConvertBloodstoneOnKillEvent();
     }
 
     static void RegisterConvertBloodstoneOnKillEvent(){
