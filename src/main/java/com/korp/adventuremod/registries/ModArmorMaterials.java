@@ -39,6 +39,23 @@ public class ModArmorMaterials {
             false
     );
 
+    public static RegistryEntry<ArmorMaterial> STEEL = registerMaterial(
+            "steel",
+            Map.of(
+                    ArmorItem.Type.BOOTS, 2,
+                    ArmorItem.Type.LEGGINGS, 5,
+                    ArmorItem.Type.CHESTPLATE, 6,
+                    ArmorItem.Type.HELMET, 2,
+                    ArmorItem.Type.BODY, 5
+            ),
+            10,
+            SoundEvents.ITEM_ARMOR_EQUIP_IRON,
+            () -> Ingredient.ofItems(ModItems.STEEL_INGOT),
+            0.0f,
+            0.1f,
+            false
+    );
+
     public static RegistryEntry<ArmorMaterial> CACTUS = registerMaterial(
             "cactus",
             Map.of(

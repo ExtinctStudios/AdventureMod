@@ -34,6 +34,14 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .pattern("#")
                 .offerTo(recipeExporter);
 
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.STEEL_INGOT,1)
+                .input('1', Items.IRON_INGOT)
+                .input('2', Items.COAL)
+                .criterion(hasItem(Items.STRING), conditionsFromItem(Items.STRING))
+                .pattern("1")
+                .pattern("2")
+                .offerTo(recipeExporter);
+
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.LEAF_INGOT)
                 .input('1', Items.IRON_INGOT)
                 .input('2', ItemTags.LEAVES)
@@ -49,6 +57,33 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 ModItems.CLOTH_CHESTPLATE,
                 ModItems.CLOTH_LEGGINGS,
                 ModItems.CLOTH_BOOTS,
+                recipeExporter
+        );
+
+        offerArmorRecipe(
+                ModItems.STEEL_INGOT,
+                ModItems.STEEL_HELMET,
+                ModItems.STEEL_CHESTPLATE,
+                ModItems.STEEL_LEGGINGS,
+                ModItems.STEEL_BOOTS,
+                recipeExporter
+        );
+
+        offerEquipmentRecipe(
+                ModItems.STEEL_INGOT,
+                Items.STICK,
+                ModItems.STEEL_SWORD,
+                ModItems.STEEL_PICKAXE,
+                ModItems.STEEL_AXE,
+                ModItems.STEEL_SHOVEL,
+                ModItems.STEEL_HOE,
+                recipeExporter
+        );
+
+        offerHammerRecipe(
+                ModItems.STEEL_INGOT,
+                Items.STICK,
+                ModItems.STEEL_HAMMER,
                 recipeExporter
         );
 
@@ -107,18 +142,11 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .input('1', Items.IRON_INGOT)
                 .input('2', Items.COMPASS)
                 .input('3', ModItems.WARP_ESSENCE)
-                .input('4', ModItems.IRON_ROD)
+                .input('4', Items.BLAZE_ROD)
                 .criterion(hasItem(ModItems.WARP_ESSENCE), conditionsFromItem(ModItems.WARP_ESSENCE))
-                .pattern("121")
+                .pattern("424")
                 .pattern("131")
                 .pattern(" 4 ")
-                .offerTo(recipeExporter);
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.WARP_ESSENCE)
-                .input('#', Items.ENDER_PEARL)
-                .criterion(hasItem(Items.ENDER_PEARL), conditionsFromItem(Items.ENDER_PEARL))
-                .pattern("##")
-                .pattern("##")
                 .offerTo(recipeExporter);
     }
 
@@ -261,6 +289,22 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .pattern("m")
                 .pattern("m")
                 .pattern("s")
+                .offerTo(recipeExporter);
+    }
+
+    static void offerHammerRecipe(
+            ItemConvertible material,
+            ItemConvertible stick,
+            ItemConvertible hammer,
+            RecipeExporter recipeExporter
+    ){
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, hammer)
+                .input('m', material)
+                .input('s', stick)
+                .criterion(hasItem(material), conditionsFromItem(material))
+                .pattern("mmm")
+                .pattern("mmm")
+                .pattern(" s ")
                 .offerTo(recipeExporter);
     }
 

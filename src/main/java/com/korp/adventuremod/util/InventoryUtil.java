@@ -31,6 +31,36 @@ public class InventoryUtil {
      * @param oldItem The item to replace
      * @param newItem The item that replaces old item
      * @param droppedItemEntitySource The source of the dropped item
+     */
+    public static void replaceItem(
+            PlayerEntity playerEntity,
+            ItemConvertible oldItem,
+            ItemConvertible newItem,
+            Entity droppedItemEntitySource){
+        replaceItem(playerEntity, oldItem, newItem, droppedItemEntitySource, 1);
+    }
+
+    /**
+     *
+     * @param playerEntity The player whose inventory is accessed
+     * @param oldItem The item to replace
+     * @param newItem The item that replaces old item
+     * @param oldItemReplaced The amount of old items that are replaced
+     */
+    public static void replaceItem(
+            PlayerEntity playerEntity,
+            ItemConvertible oldItem,
+            ItemConvertible newItem,
+            int oldItemReplaced){
+        replaceItem(playerEntity, oldItem, newItem, playerEntity, oldItemReplaced);
+    }
+
+    /**
+     *
+     * @param playerEntity The player whose inventory is accessed
+     * @param oldItem The item to replace
+     * @param newItem The item that replaces old item
+     * @param droppedItemEntitySource The source of the dropped item
      * @param oldItemReplaced The amount of old items that are replaced
      */
     public static void replaceItem(

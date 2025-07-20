@@ -193,24 +193,24 @@ public class ModItems {
     );
 
     public static final Item BLOODSTONE_SWORD = register(
-            new SwordItem(ModToolMaterials.BLOOD_STONE, new Item.Settings()
-                    .attributeModifiers(SwordItem.createAttributeModifiers(ModToolMaterials.BLOOD_STONE, 3, -2.4f))), "bloodstone_sword");
+            new SwordItem(ModToolMaterials.BLOODSTONE, new Item.Settings()
+                    .attributeModifiers(SwordItem.createAttributeModifiers(ModToolMaterials.BLOODSTONE, 3, -2.4f))), "bloodstone_sword");
 
     public static final Item BLOODSTONE_PICKAXE = register(
-            new PickaxeItem(ModToolMaterials.BLOOD_STONE, new Item.Settings()
-                    .attributeModifiers(PickaxeItem.createAttributeModifiers(ModToolMaterials.BLOOD_STONE, 1, -3f))), "bloodstone_pickaxe");
+            new PickaxeItem(ModToolMaterials.BLOODSTONE, new Item.Settings()
+                    .attributeModifiers(PickaxeItem.createAttributeModifiers(ModToolMaterials.BLOODSTONE, 1, -3f))), "bloodstone_pickaxe");
 
     public static final Item BLOODSTONE_AXE = register(
-            new AxeItem(ModToolMaterials.BLOOD_STONE, new Item.Settings()
-                    .attributeModifiers(AxeItem.createAttributeModifiers(ModToolMaterials.BLOOD_STONE, 5.5f, -3.4f))), "bloodstone_axe");
+            new AxeItem(ModToolMaterials.BLOODSTONE, new Item.Settings()
+                    .attributeModifiers(AxeItem.createAttributeModifiers(ModToolMaterials.BLOODSTONE, 5.5f, -3.4f))), "bloodstone_axe");
 
     public static final Item BLOODSTONE_SHOVEL = register(
-            new ShovelItem(ModToolMaterials.BLOOD_STONE, new Item.Settings()
-                    .attributeModifiers(ShovelItem.createAttributeModifiers(ModToolMaterials.BLOOD_STONE, 1.5f, -3.0f))), "bloodstone_shovel");
+            new ShovelItem(ModToolMaterials.BLOODSTONE, new Item.Settings()
+                    .attributeModifiers(ShovelItem.createAttributeModifiers(ModToolMaterials.BLOODSTONE, 1.5f, -3.0f))), "bloodstone_shovel");
 
     public static final Item BLOODSTONE_HOE = register(
-            new HoeItem(ModToolMaterials.BLOOD_STONE, new Item.Settings()
-                    .attributeModifiers(HoeItem.createAttributeModifiers(ModToolMaterials.BLOOD_STONE, -3.0f, -0.2f))), "bloodstone_hoe");
+            new HoeItem(ModToolMaterials.BLOODSTONE, new Item.Settings()
+                    .attributeModifiers(HoeItem.createAttributeModifiers(ModToolMaterials.BLOODSTONE, -3.0f, -0.2f))), "bloodstone_hoe");
 
     public static final Item BLOODSTONE = register(new Item(new Item.Settings()), "bloodstone");
     public static final Item BLOODSTONE_EMPTY = register(new Item(new Item.Settings()), "bloodstone_empty");
@@ -218,6 +218,74 @@ public class ModItems {
     public static final Item MAGIC_MIRROR = register(new MagicMirrorItem(new Item.Settings().maxCount(1)), "magic_mirror");
 
     public static final Item WARP_ESSENCE = register(new Item(new Item.Settings().maxCount(1)), "warp_essence");
+
+    public static final Item STEEL_INGOT = register(new Item(new Item.Settings()), "steel_ingot");
+
+    public static final int STEEL_INGOT_DURABILITY_MULTIPLIER = 15;
+    public static final Item STEEL_HELMET = register(
+            new ArmorItem(
+                    ModArmorMaterials.STEEL,
+                    ArmorItem.Type.HELMET,
+                    new Item.Settings()
+                            .maxDamage(ArmorItem.Type.HELMET.getMaxDamage(STEEL_INGOT_DURABILITY_MULTIPLIER))
+                            .attributeModifiers(AttributeModifiersComponent.builder().build())
+            ),
+            "steel_helmet"
+    );
+    public static final Item STEEL_CHESTPLATE = register(
+            new ArmorItem(
+                    ModArmorMaterials.STEEL,
+                    ArmorItem.Type.CHESTPLATE,
+                    new Item.Settings()
+                            .maxDamage(ArmorItem.Type.CHESTPLATE.getMaxDamage(STEEL_INGOT_DURABILITY_MULTIPLIER))
+                            .attributeModifiers(AttributeModifiersComponent.builder().build())
+            ),
+            "steel_chestplate"
+    );
+    public static final Item STEEL_LEGGINGS = register(
+            new ArmorItem(
+                    ModArmorMaterials.STEEL,
+                    ArmorItem.Type.LEGGINGS,
+                    new Item.Settings()
+                            .maxDamage(ArmorItem.Type.LEGGINGS.getMaxDamage(STEEL_INGOT_DURABILITY_MULTIPLIER))
+                            .attributeModifiers(AttributeModifiersComponent.builder().build())
+            ),
+            "steel_leggings"
+    );
+    public static final Item STEEL_BOOTS = register(
+            new ArmorItem(
+                    ModArmorMaterials.STEEL,
+                    ArmorItem.Type.BOOTS,
+                    new Item.Settings()
+                            .maxDamage(ArmorItem.Type.BOOTS.getMaxDamage(STEEL_INGOT_DURABILITY_MULTIPLIER))
+                            .attributeModifiers(AttributeModifiersComponent.builder().build())
+            ),
+            "steel_boots"
+    );
+
+    public static final Item STEEL_SWORD = register(
+            new SwordItem(ModToolMaterials.STEEL, new Item.Settings()
+                    .attributeModifiers(SwordItem.createAttributeModifiers(ModToolMaterials.STEEL, 3, -2.4f))), "steel_sword");
+
+    public static final Item STEEL_PICKAXE = register(
+            new PickaxeItem(ModToolMaterials.STEEL, new Item.Settings()
+                    .attributeModifiers(PickaxeItem.createAttributeModifiers(ModToolMaterials.STEEL, 1, -3f))), "steel_pickaxe");
+
+    public static final Item STEEL_AXE = register(
+            new AxeItem(ModToolMaterials.STEEL, new Item.Settings()
+                    .attributeModifiers(AxeItem.createAttributeModifiers(ModToolMaterials.STEEL, 5.5f, -3.4f))), "steel_axe");
+
+    public static final Item STEEL_SHOVEL = register(
+            new ShovelItem(ModToolMaterials.STEEL, new Item.Settings()
+                    .attributeModifiers(ShovelItem.createAttributeModifiers(ModToolMaterials.STEEL, 1.5f, -3.0f))), "steel_shovel");
+
+    public static final Item STEEL_HOE = register(
+            new HoeItem(ModToolMaterials.STEEL, new Item.Settings()
+                    .attributeModifiers(HoeItem.createAttributeModifiers(ModToolMaterials.STEEL, -3.0f, -0.2f))), "steel_hoe");
+
+    public static final Item STEEL_HAMMER = register(
+            new SwordItem(ModToolMaterials.STEEL, new Item.Settings()
+                    .attributeModifiers(SwordItem.createAttributeModifiers(ModToolMaterials.STEEL, 7, -3.7f))), "steel_hammer");
 
     public static void initialize(){}
 

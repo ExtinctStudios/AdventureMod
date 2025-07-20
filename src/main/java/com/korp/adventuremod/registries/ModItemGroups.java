@@ -20,11 +20,24 @@ public class ModItemGroups {
 
                         entries.add(ModItems.IRON_ROD);
                         entries.add(ModItems.CLOTH);
+                        entries.add(ModItems.STEEL_INGOT);
 
                         entries.add(ModItems.CLOTH_HELMET);
                         entries.add(ModItems.CLOTH_CHESTPLATE);
                         entries.add(ModItems.CLOTH_LEGGINGS);
                         entries.add(ModItems.CLOTH_BOOTS);
+
+                        entries.add(ModItems.STEEL_HELMET);
+                        entries.add(ModItems.STEEL_CHESTPLATE);
+                        entries.add(ModItems.STEEL_LEGGINGS);
+                        entries.add(ModItems.STEEL_BOOTS);
+
+                        entries.add(ModItems.STEEL_SWORD);
+                        entries.add(ModItems.STEEL_PICKAXE);
+                        entries.add(ModItems.STEEL_AXE);
+                        entries.add(ModItems.STEEL_SHOVEL);
+                        entries.add(ModItems.STEEL_HOE);
+                        entries.add(ModItems.STEEL_HAMMER);
 
                         entries.add(ModItems.CACTUS_HELMET);
                         entries.add(ModItems.CACTUS_CHESTPLATE);

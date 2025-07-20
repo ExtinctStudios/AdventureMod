@@ -12,11 +12,11 @@
       "item": "adventuremod:warp_essence"
     },
     "4": {
-      "item": "adventuremod:iron_rod"
+      "item": "minecraft:blaze_rod"
     }
   },
   "pattern": [
-    "121",
+    "424",
     "131",
     " 4 "
   ],

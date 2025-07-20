@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "m": {
+      "item": "adventuremod:steel_ingot"
+    },
+    "s": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    " mm",
+    " s ",
+    " s "
+  ],
+  "result": {
+    "count": 1,
+    "id": "adventuremod:steel_hoe"
+  }
+}

@@ -24,11 +24,24 @@ public class ModModelProvider extends FabricModelProvider {
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
         itemModelGenerator.register(ModItems.IRON_ROD, Models.GENERATED);
         itemModelGenerator.register(ModItems.CLOTH, Models.GENERATED);
+        itemModelGenerator.register(ModItems.STEEL_INGOT, Models.GENERATED);
 
         itemModelGenerator.registerArmor((ArmorItem) ModItems.CLOTH_HELMET);
         itemModelGenerator.registerArmor((ArmorItem) ModItems.CLOTH_CHESTPLATE);
         itemModelGenerator.registerArmor((ArmorItem) ModItems.CLOTH_LEGGINGS);
         itemModelGenerator.registerArmor((ArmorItem) ModItems.CLOTH_BOOTS);
+
+        itemModelGenerator.registerArmor((ArmorItem) ModItems.STEEL_HELMET);
+        itemModelGenerator.registerArmor((ArmorItem) ModItems.STEEL_CHESTPLATE);
+        itemModelGenerator.registerArmor((ArmorItem) ModItems.STEEL_LEGGINGS);
+        itemModelGenerator.registerArmor((ArmorItem) ModItems.STEEL_BOOTS);
+
+        itemModelGenerator.register(ModItems.STEEL_SWORD, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.STEEL_PICKAXE, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.STEEL_AXE, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.STEEL_SHOVEL, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.STEEL_HOE, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.STEEL_HAMMER, Models.HANDHELD);
 
         itemModelGenerator.registerArmor((ArmorItem) ModItems.CACTUS_HELMET);
         itemModelGenerator.registerArmor((ArmorItem) ModItems.CACTUS_CHESTPLATE);
