@@ -77,5 +77,12 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.MAGIC_MIRROR, Models.HANDHELD);
 
         itemModelGenerator.register(ModItems.WARP_ESSENCE, Models.GENERATED);
+
+        itemModelGenerator.register(ModItems.LEATHER_ELYTRA, Models.GENERATED);
+
+        itemModelGenerator.registerArmor((ArmorItem) ModItems.BONE_REINFORCED_CLOTH_HELMET);
+        itemModelGenerator.registerArmor((ArmorItem) ModItems.BONE_REINFORCED_CLOTH_CHESTPLATE);
+
+        itemModelGenerator.registerArmor((ArmorItem) ModItems.SKULLISH_HELMET);
     }
 }

@@ -1,6 +1,7 @@
 package com.korp.adventuremod.registries;
 
 import com.korp.adventuremod.AdventureMod;
+import com.korp.adventuremod.items.LeatherElytraItem;
 import com.korp.adventuremod.items.MagicMirrorItem;
 import net.minecraft.component.type.AttributeModifierSlot;
 import net.minecraft.component.type.AttributeModifiersComponent;
@@ -10,6 +11,7 @@ import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.Rarity;
 
 public class ModItems {
     public static final Item IRON_ROD = register(new Item(new Item.Settings()), "iron_rod");
@@ -286,6 +288,42 @@ public class ModItems {
     public static final Item STEEL_HAMMER = register(
             new SwordItem(ModToolMaterials.STEEL, new Item.Settings()
                     .attributeModifiers(SwordItem.createAttributeModifiers(ModToolMaterials.STEEL, 7, -3.7f))), "steel_hammer");
+
+    public static final Item LEATHER_ELYTRA = register(new LeatherElytraItem(new Item.Settings().maxDamage(231)), "leather_elytra");
+
+    public static final int BONE_REINFORCED_CLOTH_DURABILITY_MULTIPLIER = 15;
+    public static final Item BONE_REINFORCED_CLOTH_HELMET = register(
+            new ArmorItem(
+                    ModArmorMaterials.BONE_REINFORCED_CLOTH,
+                    ArmorItem.Type.HELMET,
+                    new Item.Settings()
+                            .maxDamage(ArmorItem.Type.HELMET.getMaxDamage(BONE_REINFORCED_CLOTH_DURABILITY_MULTIPLIER))
+                            .attributeModifiers(AttributeModifiersComponent.builder().build())
+            ),
+            "bone_reinforced_cloth_helmet"
+    );
+    public static final Item BONE_REINFORCED_CLOTH_CHESTPLATE = register(
+            new ArmorItem(
+                    ModArmorMaterials.BONE_REINFORCED_CLOTH,
+                    ArmorItem.Type.CHESTPLATE,
+                    new Item.Settings()
+                            .maxDamage(ArmorItem.Type.CHESTPLATE.getMaxDamage(BONE_REINFORCED_CLOTH_DURABILITY_MULTIPLIER))
+                            .attributeModifiers(AttributeModifiersComponent.builder().build())
+            ),
+            "bone_reinforced_cloth_chestplate"
+    );
+
+    public static final int SKULLISH_DURABILITY_MULTIPLIER = 15;
+    public static final Item SKULLISH_HELMET = register(
+            new ArmorItem(
+                    ModArmorMaterials.BONE_REINFORCED_CLOTH,
+                    ArmorItem.Type.HELMET,
+                    new Item.Settings()
+                            .maxDamage(ArmorItem.Type.HELMET.getMaxDamage(SKULLISH_DURABILITY_MULTIPLIER))
+                            .attributeModifiers(AttributeModifiersComponent.builder().build())
+            ),
+            "skullish_helmet"
+    );
 
     public static void initialize(){}
 

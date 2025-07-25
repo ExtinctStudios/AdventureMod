@@ -72,6 +72,13 @@ public class ModItemGroups {
                         entries.add(ModItems.MAGIC_MIRROR);
 
                         entries.add(ModItems.WARP_ESSENCE);
+
+                        entries.add(ModItems.LEATHER_ELYTRA);
+
+                        entries.add(ModItems.BONE_REINFORCED_CLOTH_HELMET);
+                        entries.add(ModItems.BONE_REINFORCED_CLOTH_CHESTPLATE);
+
+                        entries.add(ModItems.SKULLISH_HELMET);
                     }))
                     .build()
     );

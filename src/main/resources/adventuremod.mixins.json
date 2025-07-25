@@ -4,6 +4,7 @@
   "package": "com.korp.adventuremod.mixin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
+    "PlayerEntityMixin"
   ],
   "client": [
     "AbstractClientPlayerEntityMixin"

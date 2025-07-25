@@ -39,6 +39,20 @@ public class ModArmorMaterials {
             false
     );
 
+    public static RegistryEntry<ArmorMaterial> BONE_REINFORCED_CLOTH = registerMaterial(
+            "cloth",
+            Map.of(
+                    ArmorItem.Type.CHESTPLATE, 6,
+                    ArmorItem.Type.HELMET, 2
+            ),
+            10,
+            SoundEvents.ITEM_ARMOR_EQUIP_LEATHER,
+            () -> Ingredient.ofItems(ModItems.CLOTH),
+            0.0f,
+            0.0f,
+            false
+    );
+
     public static RegistryEntry<ArmorMaterial> STEEL = registerMaterial(
             "steel",
             Map.of(

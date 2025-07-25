@@ -95,10 +95,10 @@ public class HuskEntity extends HostileEntity {
         super.onStoppedTrackingBy(player);
         this.bossBar.removePlayer(player);
     }
-
+    
     @Override
-    public void onDamaged(DamageSource damageSource) {
-        super.onDamaged(damageSource);
+    public boolean damage(DamageSource source, float amount) {
         this.bossBar.setPercent(this.getHealth() / this.getMaxHealth());
+        return super.damage(source, amount);
     }
 }

@@ -4,6 +4,7 @@ import com.korp.adventuremod.registries.ModItems;
 import com.korp.adventuremod.registries.ModTags;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
+import net.minecraft.block.ChestBlock;
 import net.minecraft.data.server.recipe.RecipeExporter;
 import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
 import net.minecraft.item.ItemConvertible;
@@ -148,6 +149,50 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .pattern("131")
                 .pattern(" 4 ")
                 .offerTo(recipeExporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.LEATHER_ELYTRA)
+                .input('1', Items.STICK)
+                .input('2', Items.LEATHER)
+                .criterion(hasItem(Items.LEATHER), conditionsFromItem(Items.LEATHER))
+                .pattern("212")
+                .pattern("2 2")
+                .offerTo(recipeExporter);
+
+        offerUpgradeableItemRecipe(Items.BONE, ModItems.CLOTH_HELMET, ModItems.BONE_REINFORCED_CLOTH_HELMET, recipeExporter);
+        offerUpgradeableItemRecipe(Items.BONE, ModItems.CLOTH_CHESTPLATE, ModItems.BONE_REINFORCED_CLOTH_CHESTPLATE, recipeExporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.SKULLISH_HELMET)
+                .input('#', Items.BONE)
+                .criterion(hasItem(Items.BONE), conditionsFromItem(Items.BONE))
+                .pattern("###")
+                .pattern("# #")
+                .pattern("###")
+                .offerTo(recipeExporter);
+    }
+
+    static void offerHelmetRecipe(
+            ItemConvertible material,
+            ItemConvertible helmet,
+            RecipeExporter recipeExporter){
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, helmet)
+                .input('#', material)
+                .criterion(hasItem(material), conditionsFromItem(material))
+                .pattern("###")
+                .pattern("# #")
+                .offerTo(recipeExporter);
+    }
+
+    static void offerChestplateRecipe(
+            ItemConvertible material,
+            ItemConvertible chestplate,
+            RecipeExporter recipeExporter){
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, chestplate)
+                .input('#', material)
+                .criterion(hasItem(material), conditionsFromItem(material))
+                .pattern("# #")
+                .pattern("###")
+                .pattern("###")
+                .offerTo(recipeExporter);
     }
 
     static void offerArmorRecipe(
@@ -157,19 +202,8 @@ public class ModRecipeProvider extends FabricRecipeProvider {
             ItemConvertible leggings,
             ItemConvertible boots,
             RecipeExporter recipeExporter){
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, helmet)
-                .input('#', material)
-                .criterion(hasItem(material), conditionsFromItem(material))
-                .pattern("###")
-                .pattern("# #")
-                .offerTo(recipeExporter);
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, chestplate)
-                .input('#', material)
-                .criterion(hasItem(material), conditionsFromItem(material))
-                .pattern("# #")
-                .pattern("###")
-                .pattern("###")
-                .offerTo(recipeExporter);
+        offerHelmetRecipe(material, helmet, recipeExporter);
+        offerChestplateRecipe(material, chestplate, recipeExporter);
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, leggings)
                 .input('#', material)
                 .criterion(hasItem(material), conditionsFromItem(material))
@@ -182,6 +216,21 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(hasItem(material), conditionsFromItem(material))
                 .pattern("# #")
                 .pattern("# #")
+                .offerTo(recipeExporter);
+    }
+
+    static void offerUpgradeableItemRecipe(
+            ItemConvertible material,
+            ItemConvertible baseItem,
+            ItemConvertible item,
+            RecipeExporter recipeExporter){
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, item)
+                .input('#', material)
+                .input('b', baseItem)
+                .criterion(hasItem(material), conditionsFromItem(material))
+                .pattern(" # ")
+                .pattern("#b#")
+                .pattern(" # ")
                 .offerTo(recipeExporter);
     }
 
@@ -197,38 +246,10 @@ public class ModRecipeProvider extends FabricRecipeProvider {
             ItemConvertible boots,
             RecipeExporter recipeExporter
     ) {
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, helmet)
-                .input('#', material)
-                .input('b', baseHelmet)
-                .criterion(hasItem(material), conditionsFromItem(material))
-                .pattern(" # ")
-                .pattern("#b#")
-                .pattern(" # ")
-                .offerTo(recipeExporter);
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, chestplate)
-                .input('#', material)
-                .input('b', baseChestplate)
-                .criterion(hasItem(material), conditionsFromItem(material))
-                .pattern(" # ")
-                .pattern("#b#")
-                .pattern(" # ")
-                .offerTo(recipeExporter);
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, leggings)
-                .input('#', material)
-                .input('b', baseLeggings)
-                .criterion(hasItem(material), conditionsFromItem(material))
-                .pattern(" # ")
-                .pattern("#b#")
-                .pattern(" # ")
-                .offerTo(recipeExporter);
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, boots)
-                .input('#', material)
-                .input('b', baseBoots)
-                .criterion(hasItem(material), conditionsFromItem(material))
-                .pattern(" # ")
-                .pattern("#b#")
-                .pattern(" # ")
-                .offerTo(recipeExporter);
+        offerUpgradeableItemRecipe(material, baseHelmet, helmet, recipeExporter);
+        offerUpgradeableItemRecipe(material, baseChestplate, chestplate, recipeExporter);
+        offerUpgradeableItemRecipe(material, baseLeggings, leggings, recipeExporter);
+        offerUpgradeableItemRecipe(material, baseBoots, boots, recipeExporter);
     }
 
     static void offerEquipmentRecipe(
