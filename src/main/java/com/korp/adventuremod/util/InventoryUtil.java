@@ -18,11 +18,11 @@ public class InventoryUtil {
      * @param oldItem The item to replace
      * @param newItem The item that replaces old item
      */
-    public static void replaceItem(
+    public static boolean replaceItem(
             PlayerEntity playerEntity,
             ItemConvertible oldItem,
             ItemConvertible newItem){
-        replaceItem(playerEntity, oldItem, newItem, playerEntity, 1);
+        return replaceItem(playerEntity, oldItem, newItem, playerEntity, 1);
     }
 
     /**
@@ -32,12 +32,12 @@ public class InventoryUtil {
      * @param newItem The item that replaces old item
      * @param droppedItemEntitySource The source of the dropped item
      */
-    public static void replaceItem(
+    public static boolean replaceItem(
             PlayerEntity playerEntity,
             ItemConvertible oldItem,
             ItemConvertible newItem,
             Entity droppedItemEntitySource){
-        replaceItem(playerEntity, oldItem, newItem, droppedItemEntitySource, 1);
+        return replaceItem(playerEntity, oldItem, newItem, droppedItemEntitySource, 1);
     }
 
     /**
@@ -47,12 +47,12 @@ public class InventoryUtil {
      * @param newItem The item that replaces old item
      * @param oldItemReplaced The amount of old items that are replaced
      */
-    public static void replaceItem(
+    public static boolean replaceItem(
             PlayerEntity playerEntity,
             ItemConvertible oldItem,
             ItemConvertible newItem,
             int oldItemReplaced){
-        replaceItem(playerEntity, oldItem, newItem, playerEntity, oldItemReplaced);
+        return replaceItem(playerEntity, oldItem, newItem, playerEntity, oldItemReplaced);
     }
 
     /**
@@ -63,7 +63,7 @@ public class InventoryUtil {
      * @param droppedItemEntitySource The source of the dropped item
      * @param oldItemReplaced The amount of old items that are replaced
      */
-    public static void replaceItem(
+    public static boolean replaceItem(
             PlayerEntity playerEntity,
             ItemConvertible oldItem,
             ItemConvertible newItem,
@@ -78,11 +78,14 @@ public class InventoryUtil {
             oldItemStack = inventory.getStack(oldItemSlot);
             oldItemStack.decrement(oldItemReplaced);
 
+
+
             // Ifall spelaren redan har åtminstone 1 stack bloodstone och stacken inte är full lägg till ett föremål i stacken,
             // annars, ifall det finns åtminstone 1 tom slot skapa en ny stack med 1 bloodstone
             // annars, skapa en bloodstone item entity
             ItemStack newItemStack = new ItemStack(newItem);
-            if(inventory.contains(newItemStack) && inventory.getStack(inventory.getSlotWithStack(newItemStack)).getCount() < 64){
+            ItemStack targetSlot = inventory.getStack(inventory.getSlotWithStack(newItemStack));
+            if(inventory.contains(newItemStack) && targetSlot.getCount() < targetSlot.getMaxCount()){
                 int newItemSlot = inventory.getSlotWithStack(newItemStack);
                 newItemStack = inventory.getStack(newItemSlot);
                 newItemStack.increment(1);
@@ -98,6 +101,11 @@ public class InventoryUtil {
 
                 inventory.setStack(emptySlot, newItemStack);
             }
+
+            return true;
+        }
+        else {
+            return false;
         }
     }
 }

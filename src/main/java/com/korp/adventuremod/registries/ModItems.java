@@ -3,10 +3,12 @@ package com.korp.adventuremod.registries;
 import com.korp.adventuremod.AdventureMod;
 import com.korp.adventuremod.items.LeatherElytraItem;
 import com.korp.adventuremod.items.MagicMirrorItem;
+import com.korp.adventuremod.overrides.ModArmorItem;
 import net.minecraft.component.type.AttributeModifierSlot;
 import net.minecraft.component.type.AttributeModifiersComponent;
 import net.minecraft.entity.attribute.EntityAttributeModifier;
 import net.minecraft.entity.attribute.EntityAttributes;
+import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
@@ -315,19 +317,20 @@ public class ModItems {
 
     public static final int SKULLISH_DURABILITY_MULTIPLIER = 15;
     public static final Item SKULLISH_HELMET = register(
-            new ArmorItem(
+            new ModArmorItem(
                     ModArmorMaterials.BONE_REINFORCED_CLOTH,
                     ArmorItem.Type.HELMET,
                     new Item.Settings()
                             .maxDamage(ArmorItem.Type.HELMET.getMaxDamage(SKULLISH_DURABILITY_MULTIPLIER))
-                            .attributeModifiers(AttributeModifiersComponent.builder().build())
-            ),
+                            .attributeModifiers(AttributeModifiersComponent.builder().build()),
+                    StatusEffects.ABSORPTION),
             "skullish_helmet"
     );
 
     public static final Item BONE_WAND = register(
             new SwordItem(ModToolMaterials.BONE, new Item.Settings()
-                    .attributeModifiers(SwordItem.createAttributeModifiers(ModToolMaterials.BONE, 3, -2.4f))), "bone_wand");
+                    .attributeModifiers(SwordItem.createAttributeModifiers(ModToolMaterials.BONE, 3, -2.4f))),
+            "bone_wand");
 
     public static final int PIRATE_DURABILITY_MULTIPLIER = 15;
     public static final Item PIRATE_HELMET = register(
@@ -336,9 +339,20 @@ public class ModItems {
                     ArmorItem.Type.HELMET,
                     new Item.Settings()
                             .maxDamage(ArmorItem.Type.HELMET.getMaxDamage(PIRATE_DURABILITY_MULTIPLIER))
-                            .attributeModifiers(AttributeModifiersComponent.builder().build())
+                            .attributeModifiers(AttributeModifiersComponent.builder().build()).rarity(Rarity.UNCOMMON)
             ),
             "pirate_helmet"
+    );
+
+    public static final Item CURSED_PIRATE_HELMET = register(
+            new ArmorItem(
+                    ModArmorMaterials.CLOTH,
+                    ArmorItem.Type.HELMET,
+                    new Item.Settings()
+                            .maxDamage(ArmorItem.Type.HELMET.getMaxDamage(PIRATE_DURABILITY_MULTIPLIER))
+                            .attributeModifiers(AttributeModifiersComponent.builder().build()).rarity(Rarity.RARE)
+            ),
+            "cursed_pirate_helmet"
     );
 
     public static void initialize(){}

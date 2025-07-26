@@ -46,6 +46,24 @@ public class AdventureMod implements ModInitializer {
 
         FabricDefaultAttributeRegistry.register(ModEntities.HUSK, HuskEntity.createAttributes());
 
+        ServerLivingEntityEvents.ALLOW_DEATH.register((entity, damageSource, f) -> {
+            if (!entity.getWorld().isClient()) {
+                if (entity instanceof PlayerEntity playerEntity) {
+                    boolean damageSourceIsDrown = damageSource.getName().equals("drown");
+
+                    if (damageSourceIsDrown){
+                        if(InventoryUtil.replaceItem(playerEntity, ModItems.PIRATE_HELMET, ModItems.CURSED_PIRATE_HELMET, entity)){
+                            playerEntity.setAir(playerEntity.getMaxAir());
+                            playerEntity.setHealth(playerEntity.getMaxHealth());
+
+                            return false;
+                        }
+                    }
+                }
+            }
+            return true;
+        });
+
         RegisterHarvestWarpEssenceEvent();
         RegisterConvertBloodstoneOnKillEvent();
     }
@@ -92,8 +110,8 @@ public class AdventureMod implements ModInitializer {
                 return;
             }
 
-            if (damageSource.getAttacker() instanceof PlayerEntity player) {
-                InventoryUtil.replaceItem(player, ModItems.BLOODSTONE_EMPTY, ModItems.BLOODSTONE, entity);
+            if (damageSource.getAttacker() instanceof PlayerEntity playerEntity) {
+                InventoryUtil.replaceItem(playerEntity, ModItems.BLOODSTONE_EMPTY, ModItems.BLOODSTONE, entity);
             }
         });
     }

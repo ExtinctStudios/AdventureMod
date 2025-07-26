@@ -83,6 +83,7 @@ public class ModItemGroups {
                         entries.add(ModItems.BONE_WAND);
 
                         entries.add(ModItems.PIRATE_HELMET);
+                        entries.add(ModItems.CURSED_PIRATE_HELMET);
                     }))
                     .build()
     );

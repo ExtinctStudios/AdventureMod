@@ -88,5 +88,6 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.BONE_WAND, Models.HANDHELD);
 
         itemModelGenerator.registerArmor((ArmorItem) ModItems.PIRATE_HELMET);
+        itemModelGenerator.registerArmor((ArmorItem) ModItems.CURSED_PIRATE_HELMET);
     }
 }
