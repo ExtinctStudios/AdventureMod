@@ -1,4 +1,4 @@
-// 1.21.1	2025-07-26T17:58:20.4848038	AdventureMod/Model Definitions
+// 1.21.1	2025-07-26T18:05:11.0133255	AdventureMod/Model Definitions
 7bced3c9329b2029c2522c0968759a4e0070b687 assets\adventuremod\models\item\cloth_boots_netherite_trim.json
 0e3b4e48626bcc6537ef065be5b4e5539d4db667 assets\adventuremod\models\item\leaf_boots_amethyst_trim.json
 0dcfabb242a2496b91305eca4530492180d89700 assets\adventuremod\models\item\cactus_helmet_gold_trim.json
@@ -104,8 +104,8 @@ c3b10ff8a1dd2f7122564768d564f2c7bde75d0b assets\adventuremod\models\item\leaf_le
 e62d356ce06c85cc0fa5a9b302fab29404b20c0e assets\adventuremod\models\item\cloth_leggings_emerald_trim.json
 f1a7edac1064de7d49f85814cede0f1bb0228973 assets\adventuremod\models\item\skullish_helmet_quartz_trim.json
 dfa9aac0f795697a7e9ab270a829a00d14ced9d6 assets\adventuremod\models\item\steel_helmet_copper_trim.json
-8250deb126cdac050f296d634bc4b3b2ed4d59f1 assets\adventuremod\models\item\cactus_leggings_copper_trim.json
 374afb3103ba4286a364b4af1d0e7410383fb620 assets\adventuremod\models\item\bloodstone_helmet_diamond_trim.json
+8250deb126cdac050f296d634bc4b3b2ed4d59f1 assets\adventuremod\models\item\cactus_leggings_copper_trim.json
 47fb4bee1826011b562bf55cd8fb5c06324555b2 assets\adventuremod\models\item\leaf_boots_gold_trim.json
 5991acc5c88e4a7dedb7215bca2eb6fc1ef87880 assets\adventuremod\models\item\cactus_helmet_redstone_trim.json
 9b0fa2f8e2943a7878b7be0fcf746c36fcad478b assets\adventuremod\models\item\leaf_boots_redstone_trim.json

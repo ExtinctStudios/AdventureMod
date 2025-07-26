@@ -59,15 +59,16 @@ public class AdventureMod implements ModInitializer {
                 EntityHitResult entityHitResult) -> {
             ItemStack handItemStack = player.getStackInHand(hand);
 
-            if (world.isClient()) {
-                return ActionResult.SUCCESS;
+            boolean isPlayerClient = world.isClient();
+
+            if (isPlayerClient) {
+                return ActionResult.PASS;
             }
 
             boolean isHoldingEmptyBottle = handItemStack.getItem() == Items.GLASS_BOTTLE;
 
             if(!isHoldingEmptyBottle){
-                System.out.println("entity isn't holding glass bottle! returning");
-                return ActionResult.FAIL;
+                return ActionResult.PASS;
             }
 
             if(entity instanceof EndermanEntity endermanEntity){
@@ -79,8 +80,9 @@ public class AdventureMod implements ModInitializer {
 
                 return ActionResult.SUCCESS;
             }
-
-            return ActionResult.FAIL;
+            else{
+                return ActionResult.PASS;
+            }
         });
     }
 
