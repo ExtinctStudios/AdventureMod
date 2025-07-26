@@ -84,5 +84,9 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.registerArmor((ArmorItem) ModItems.BONE_REINFORCED_CLOTH_CHESTPLATE);
 
         itemModelGenerator.registerArmor((ArmorItem) ModItems.SKULLISH_HELMET);
+
+        itemModelGenerator.register(ModItems.BONE_WAND, Models.HANDHELD);
+
+        itemModelGenerator.registerArmor((ArmorItem) ModItems.PIRATE_HELMET);
     }
 }

@@ -325,6 +325,22 @@ public class ModItems {
             "skullish_helmet"
     );
 
+    public static final Item BONE_WAND = register(
+            new SwordItem(ModToolMaterials.BONE, new Item.Settings()
+                    .attributeModifiers(SwordItem.createAttributeModifiers(ModToolMaterials.BONE, 3, -2.4f))), "bone_wand");
+
+    public static final int PIRATE_DURABILITY_MULTIPLIER = 15;
+    public static final Item PIRATE_HELMET = register(
+            new ArmorItem(
+                    ModArmorMaterials.CLOTH,
+                    ArmorItem.Type.HELMET,
+                    new Item.Settings()
+                            .maxDamage(ArmorItem.Type.HELMET.getMaxDamage(PIRATE_DURABILITY_MULTIPLIER))
+                            .attributeModifiers(AttributeModifiersComponent.builder().build())
+            ),
+            "pirate_helmet"
+    );
+
     public static void initialize(){}
 
     public static Item register(Item item, String id) {

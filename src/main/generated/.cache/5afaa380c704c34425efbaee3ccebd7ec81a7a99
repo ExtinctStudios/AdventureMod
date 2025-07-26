@@ -1,7 +1,8 @@
-// 1.21.1	2025-07-25T14:44:21.3268791	AdventureMod/Recipes
+// 1.21.1	2025-07-26T17:58:20.4893397	AdventureMod/Recipes
 01ae0975bef721196da2e5d3bb18f5db0e90ee4d data\adventuremod\recipe\steel_helmet.json
 7d3612b3dc2492d91cce7b42a395dfe9916f1ff9 data\adventuremod\recipe\skullish_helmet.json
 e5a552a9a80216164785facc6836d234f35ab83b data\adventuremod\advancement\recipes\misc\leaf_boots.json
+0b5bbeda183108d7f6f1f605cd821755f490b155 data\adventuremod\recipe\bone_wand.json
 6761cb494c82921f921ac7505498083aab6b4c02 data\adventuremod\advancement\recipes\misc\steel_axe.json
 431e78df1a8639de8cc3dd7a4cd0cd73ca9bc335 data\adventuremod\advancement\recipes\misc\steel_ingot.json
 a380246cf9a8963a7d61d056bad824eabe37b821 data\adventuremod\advancement\recipes\misc\skullish_helmet.json
@@ -42,6 +43,7 @@ d8c1980bd145fa04b643afe2eae2ad0db1b476aa data\adventuremod\recipe\cloth_boots.js
 fbed14ad11ba7ca069b30ecbaafe961984ca9aff data\adventuremod\advancement\recipes\misc\bloodstone_shovel.json
 ff27c41097be687211307f78349d4068d69cd52a data\adventuremod\recipe\leaf_boots.json
 2ba780dcdacd85082cf9e1b346f921719197e354 data\adventuremod\recipe\steel_boots.json
+ff4c02aa144d5983f4da2d19864fac545ef4b831 data\adventuremod\advancement\recipes\misc\bone_wand.json
 228de812a356e9c59cffd5e6a0ce9f446b67c09a data\adventuremod\recipe\steel_chestplate.json
 6c04bb84c8c1d6ef155c60ca0ff8338807af2afd data\adventuremod\recipe\cactus_chestplate.json
 83f75b9c2f9cb4b2585646ba398f9ea593112e9c data\adventuremod\recipe\steel_shovel.json
@@ -68,6 +70,7 @@ af1a2290e8f4d9f996192b46af47593cfe972868 data\adventuremod\recipe\bloodstone_leg
 448ab6005ab6fbcd8ffbac73bc211f70cbaecaca data\adventuremod\recipe\bone_reinforced_cloth_chestplate.json
 753298fe2de5288400d3a527a029ac63e967a869 data\adventuremod\advancement\recipes\misc\cactus_boots.json
 861d36d5be459f0f5569ccd40f63a7d6965bd157 data\adventuremod\recipe\bloodstone_shovel.json
+060d8f13f616ee9845c20c8eda03398fb06c2f22 data\adventuremod\advancement\recipes\misc\pirate_helmet.json
 793e4c9eda2e059cfa4f77000f6c9e734025e5a3 data\adventuremod\recipe\leaf_leggings.json
 945881c9c875877650daac0acdd23348dfad84d0 data\adventuremod\advancement\recipes\misc\cloth_leggings.json
 eee233b606315dd81b2284099f113ee13ea85d58 data\adventuremod\advancement\recipes\misc\steel_leggings.json
@@ -82,4 +85,5 @@ eb4a480aa062ff475a6ab4b97eb591017ea90898 data\adventuremod\advancement\recipes\m
 432e69d63577d44f6975db059764ef2418c5204a data\adventuremod\recipe\steel_hoe.json
 f267e564216642ba77d6676551f95cb7bfa0f788 data\adventuremod\recipe\cloth_helmet.json
 95f820478c6320067385177c184b9bcd996bd8d5 data\adventuremod\advancement\recipes\misc\leaf_leggings.json
+07e5e1f683fc6fff174bc1b79d60cd7bf4c950dc data\adventuremod\recipe\pirate_helmet.json
 016811126fb91a89715a1fd85fb73081c8265c54 data\adventuremod\recipe\steel_ingot.json

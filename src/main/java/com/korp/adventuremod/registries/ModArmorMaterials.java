@@ -40,7 +40,7 @@ public class ModArmorMaterials {
     );
 
     public static RegistryEntry<ArmorMaterial> BONE_REINFORCED_CLOTH = registerMaterial(
-            "cloth",
+            "bone_reinforced_cloth",
             Map.of(
                     ArmorItem.Type.CHESTPLATE, 6,
                     ArmorItem.Type.HELMET, 2

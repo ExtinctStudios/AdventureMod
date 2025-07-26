@@ -79,6 +79,10 @@ public class ModItemGroups {
                         entries.add(ModItems.BONE_REINFORCED_CLOTH_CHESTPLATE);
 
                         entries.add(ModItems.SKULLISH_HELMET);
+
+                        entries.add(ModItems.BONE_WAND);
+
+                        entries.add(ModItems.PIRATE_HELMET);
                     }))
                     .build()
     );

@@ -12,6 +12,7 @@ import java.util.Objects;
 import java.util.function.Supplier;
 
 public enum ModToolMaterials implements ToolMaterial {
+    BONE(BlockTags.INCORRECT_FOR_IRON_TOOL, 75, 8.0F, 3.0F, 16, () -> Ingredient.ofItems(Items.BONE)),
     CACTUS(BlockTags.INCORRECT_FOR_IRON_TOOL, 250, 6.0F, 2.0F, 14, () -> Ingredient.ofItems(Items.CACTUS)),
     STEEL(BlockTags.INCORRECT_FOR_IRON_TOOL, 400, 6.0F, 2.2F, 14, () -> Ingredient.ofItems(ModItems.STEEL_INGOT)),
     BLOODSTONE(BlockTags.INCORRECT_FOR_DIAMOND_TOOL, 1561, 8.0F, 3.0F, 10, () -> Ingredient.ofItems(ModItems.BLOODSTONE));

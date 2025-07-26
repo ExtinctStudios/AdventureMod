@@ -168,6 +168,19 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .pattern("# #")
                 .pattern("###")
                 .offerTo(recipeExporter);
+
+        offerWandRecipe(Items.BONE, Items.STICK, ModItems.BONE_WAND, recipeExporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.PIRATE_HELMET)
+                .input('1', Items.GOLD_NUGGET)
+                .input('2', Items.BONE)
+                .input('3', ModItems.CLOTH)
+                .input('4', Items.INK_SAC)
+                .criterion(hasItem(Items.INK_SAC), conditionsFromItem(Items.INK_SAC))
+                .pattern("121")
+                .pattern("343")
+                .offerTo(recipeExporter);
+
     }
 
     static void offerHelmetRecipe(
@@ -308,6 +321,21 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .input('s', stick)
                 .criterion(hasItem(material), conditionsFromItem(material))
                 .pattern("m")
+                .pattern("m")
+                .pattern("s")
+                .offerTo(recipeExporter);
+    }
+
+    static void offerWandRecipe(
+            ItemConvertible material,
+            ItemConvertible stick,
+            ItemConvertible wand,
+            RecipeExporter recipeExporter
+    ){
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, wand)
+                .input('m', material)
+                .input('s', stick)
+                .criterion(hasItem(material), conditionsFromItem(material))
                 .pattern("m")
                 .pattern("s")
                 .offerTo(recipeExporter);
