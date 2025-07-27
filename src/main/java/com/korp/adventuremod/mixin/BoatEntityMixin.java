@@ -18,18 +18,25 @@ public class BoatEntityMixin {
 
         // check if in water
 
+        final double PIRATE_HELMET_BOAT_SPEED = 12.0;
+        final double PIRATE_HELMET_BOAT_ACCELERATION_MULTIPLIER = 1.05;
+        final double CURSED_PIRATE_HELMET_BOAT_SPEED = 18.0;
+        final double CURSED_PIRATE_HELMET_BOAT_ACCELERATION_MULTIPLIER = 1.08;
+
         if(boatEntity.getControllingPassenger() instanceof PlayerEntity playerEntity){
             if(playerEntity.getEquippedStack(EquipmentSlot.HEAD).getItem() == ModItems.PIRATE_HELMET) {// Set to pirate hat
-                Vec3d velocity = boatEntity.getVelocity().multiply(1.05);
-                if(velocity.length() > 16.0){
-                    velocity = velocity.normalize().multiply(16.0);
+                if(boatEntity.getVelocity().length() <= PIRATE_HELMET_BOAT_SPEED){
+                    Vec3d velocity = boatEntity.getVelocity().multiply(PIRATE_HELMET_BOAT_ACCELERATION_MULTIPLIER);
+                    if(velocity.length() > PIRATE_HELMET_BOAT_SPEED){
+                        velocity = velocity.normalize().multiply(PIRATE_HELMET_BOAT_SPEED);
+                    }
+                    boatEntity.setVelocity(velocity);
                 }
-                boatEntity.setVelocity(velocity);
             } else if(playerEntity.getEquippedStack(EquipmentSlot.HEAD).getItem() == ModItems.CURSED_PIRATE_HELMET) {// Set to pirate hat
-                if(boatEntity.getVelocity().length() <= 18){
-                    Vec3d velocity = boatEntity.getVelocity().multiply(1.08);
-                    if(velocity.length() > 20.0){
-                        velocity = velocity.normalize().multiply(20.0);
+                if(boatEntity.getVelocity().length() <= CURSED_PIRATE_HELMET_BOAT_SPEED){
+                    Vec3d velocity = boatEntity.getVelocity().multiply(CURSED_PIRATE_HELMET_BOAT_ACCELERATION_MULTIPLIER);
+                    if(velocity.length() > CURSED_PIRATE_HELMET_BOAT_SPEED){
+                        velocity = velocity.normalize().multiply(CURSED_PIRATE_HELMET_BOAT_SPEED);
                     }
                     boatEntity.setVelocity(velocity);
                 }

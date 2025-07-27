@@ -3,12 +3,11 @@ package com.korp.adventuremod.registries;
 import com.korp.adventuremod.AdventureMod;
 import com.korp.adventuremod.items.LeatherElytraItem;
 import com.korp.adventuremod.items.MagicMirrorItem;
-import com.korp.adventuremod.overrides.ModArmorItem;
+import com.korp.adventuremod.overrides.ModArmorItemEffectProc;
 import net.minecraft.component.type.AttributeModifierSlot;
 import net.minecraft.component.type.AttributeModifiersComponent;
 import net.minecraft.entity.attribute.EntityAttributeModifier;
 import net.minecraft.entity.attribute.EntityAttributes;
-import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
@@ -156,7 +155,7 @@ public class ModItems {
 
     public static final int BLOOD_STONE_DURABILITY_MULTIPLIER = 15;
     public static final Item BLOODSTONE_HELMET = register(
-            new ArmorItem(
+            new ModArmorItemEffectProc(
                     ModArmorMaterials.BLOODSTONE,
                     ArmorItem.Type.HELMET,
                     new Item.Settings()
@@ -317,13 +316,12 @@ public class ModItems {
 
     public static final int SKULLISH_DURABILITY_MULTIPLIER = 15;
     public static final Item SKULLISH_HELMET = register(
-            new ModArmorItem(
+            new ArmorItem(
                     ModArmorMaterials.BONE_REINFORCED_CLOTH,
                     ArmorItem.Type.HELMET,
                     new Item.Settings()
                             .maxDamage(ArmorItem.Type.HELMET.getMaxDamage(SKULLISH_DURABILITY_MULTIPLIER))
-                            .attributeModifiers(AttributeModifiersComponent.builder().build()),
-                    StatusEffects.ABSORPTION),
+                            .attributeModifiers(AttributeModifiersComponent.builder().build())),
             "skullish_helmet"
     );
 
