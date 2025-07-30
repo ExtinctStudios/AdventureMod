@@ -30,11 +30,14 @@ public class ArcaneExtractorBlockEntity extends BlockEntity implements ExtendedS
     public static final int PROPERTY_DELEGATE_PROGRESS = 0;
     public static final int PROPERTY_DELEGATE_MAX_PROGRESS = 1;
 
-    final DefaultedList<ItemStack> inventory = DefaultedList.ofSize(3, ItemStack.EMPTY);
+    final DefaultedList<ItemStack> inventory = DefaultedList.ofSize(5, ItemStack.EMPTY);
 
     static final int INPUT_SLOT = 0;
-    static final int OUTPUT_SLOT = 1;
-    static final int SUBSTRATE_SLOT = 2;
+    //static final int OUTPUT_SLOT = 1;
+    static final int SUBSTRATE_SLOT = 1;
+    static final int BOTTLE_SLOT = 2;
+    static final int BOTTLE_SLOT2 = 3;
+    static final int BOTTLE_SLOT3 = 4;
 
     protected final PropertyDelegate propertyDelegate;
     int progress = 0;
@@ -121,8 +124,22 @@ public class ArcaneExtractorBlockEntity extends BlockEntity implements ExtendedS
         ItemStack output = new ItemStack(ModItems.WARP_ESSENCE, 1);
 
         this.removeStack(INPUT_SLOT, 1);
+        //this.setStack(OUTPUT_SLOT, new ItemStack(ModItems.WARP_ESSENCE, this.getStack(OUTPUT_SLOT).getCount() + output.getCount()));
         this.removeStack(SUBSTRATE_SLOT, 1);
-        this.setStack(OUTPUT_SLOT, new ItemStack(ModItems.WARP_ESSENCE, this.getStack(OUTPUT_SLOT).getCount() + output.getCount()));
+
+        Item bottle = Items.GLASS_BOTTLE;
+        if(this.getStack(BOTTLE_SLOT).isOf(bottle)){
+            this.removeStack(BOTTLE_SLOT, 1);
+            this.setStack(BOTTLE_SLOT, new ItemStack(ModItems.WARP_ESSENCE));
+        }
+        else if(this.getStack(BOTTLE_SLOT2).isOf(bottle)){
+            this.removeStack(BOTTLE_SLOT2, 1);
+            this.setStack(BOTTLE_SLOT2, new ItemStack(ModItems.WARP_ESSENCE));
+        }
+        else if(this.getStack(BOTTLE_SLOT3).isOf(bottle)){
+            this.removeStack(BOTTLE_SLOT3, 1);
+            this.setStack(BOTTLE_SLOT3, new ItemStack(ModItems.WARP_ESSENCE));
+        }
     }
 
     private boolean isProgressFinished() {
@@ -140,22 +157,26 @@ public class ArcaneExtractorBlockEntity extends BlockEntity implements ExtendedS
 
     private boolean hasRecipe() {
         Item input = Items.ENDER_PEARL;
-        Item substrate = ModItems.ARCANE_DUST;
         ItemStack output = new ItemStack(ModItems.WARP_ESSENCE);
+        Item substrate = ModItems.ARCANE_DUST;
+        Item bottle = Items.GLASS_BOTTLE;
 
-        return this.getStack(INPUT_SLOT).isOf(input) &&
-                this.getStack(SUBSTRATE_SLOT).isOf(substrate) &&
-                canInsertAmountIntoOutputSlot(output.getCount()) &&
-                canInsertItemIntoOutputSlot(output);
+        boolean hasAnyInput = this.getStack(INPUT_SLOT).isOf(input);
+        boolean hasSubstrate = this.getStack(SUBSTRATE_SLOT).isOf(substrate);
+        boolean hasAnyBottle = this.getStack(BOTTLE_SLOT).isOf(bottle) || this.getStack(BOTTLE_SLOT2).isOf(bottle) || this.getStack(BOTTLE_SLOT3).isOf(bottle);
+
+        return  hasAnyInput && hasSubstrate && hasAnyBottle;
+                //canInsertAmountIntoOutputSlot(output.getCount()) &&
+                //canInsertItemIntoOutputSlot(output);
     }
 
-    private boolean canInsertAmountIntoOutputSlot(int count) {
-        return this.getStack(OUTPUT_SLOT).isEmpty() || this.getStack(OUTPUT_SLOT).getCount() + count <= this.getStack(OUTPUT_SLOT).getItem().getMaxCount();
-    }
+    //private boolean canInsertAmountIntoOutputSlot(int count) {
+    //    return this.getStack(OUTPUT_SLOT).isEmpty() || this.getStack(OUTPUT_SLOT).getCount() + count <= this.getStack(OUTPUT_SLOT).getItem().getMaxCount();
+    //}
 
-    private boolean canInsertItemIntoOutputSlot(ItemStack output) {
-        return this.getStack(OUTPUT_SLOT).isEmpty() || this.getStack(OUTPUT_SLOT).getItem() == output.getItem();
-    }
+    //private boolean canInsertItemIntoOutputSlot(ItemStack output) {
+    //    return this.getStack(OUTPUT_SLOT).isEmpty() || this.getStack(OUTPUT_SLOT).getItem() == output.getItem();
+    //}
 
     @Override
     public @Nullable Packet<ClientPlayPacketListener> toUpdatePacket() {

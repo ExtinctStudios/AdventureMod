@@ -41,8 +41,8 @@ public class ArcaneExtractorScreen extends HandledScreen<ArcaneExtractorScreenHa
 
     void renderProgressArrow(DrawContext context, int x, int y) {
         if(handler.isCrafting()) {
-            context.drawTexture(ARROW_TEXTURE, x + 72, y + 33, 0, 0,
-                    handler.getScaledArrowProgress(), 38, 32, 38);
+            context.drawTexture(ARROW_TEXTURE, x + 72, y + 16, 0, 0,
+                    handler.getScaledArrowProgress(), 30, 32, 30);
         }
     }
 }

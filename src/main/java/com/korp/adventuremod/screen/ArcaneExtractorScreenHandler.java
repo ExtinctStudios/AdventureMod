@@ -28,9 +28,13 @@ public class ArcaneExtractorScreenHandler extends ScreenHandler {
         this.blockEntity = (ArcaneExtractorBlockEntity) blockEntity;
         this.propertyDelegate = propertyDelegate;
 
-        this.addSlot(new Slot(inventory, 0, 54, 34));
-        this.addSlot(new Slot(inventory, 1, 106, 34));
-        this.addSlot(new Slot(inventory, 2, 54, 54));
+        this.addSlot(new Slot(inventory, 0, 54, 17));
+        //this.addSlot(new Slot(inventory, 1, 106, 17));
+        this.addSlot(new Slot(inventory, 1, 54, 37));
+
+        this.addSlot(new Slot(inventory, 2, 83, 51));
+        this.addSlot(new Slot(inventory, 3, 106, 58));
+        this.addSlot(new Slot(inventory, 4, 129, 51));
 
         addPlayerInventory(playerInventory);
         addPlayerHotbar(playerInventory);
