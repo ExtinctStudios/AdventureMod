@@ -1,9 +1,8 @@
 {
   "itemgroup.adventuremod.default": "Adventure Mod Default",
-  "entity.adventuremod.mossling": "Mossling",
-
   "block.adventuremod.meat": "Meat",
   "block.adventuremod.bloodstone_ore": "Bloodstone Ore",
+  "block.adventuremod.arcane_extractor": "Arcane Extractor",
 
   "entity.adventuremod.husk": "Husk",
 

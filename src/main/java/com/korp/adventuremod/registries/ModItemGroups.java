@@ -18,6 +18,8 @@ public class ModItemGroups {
                         entries.add(ModBlocks.MEAT);
                         entries.add(ModBlocks.BLOODSTONE_ORE);
 
+                        entries.add(ModBlocks.ARCANE_EXTRACTOR);
+
                         entries.add(ModItems.IRON_ROD);
                         entries.add(ModItems.CLOTH);
                         entries.add(ModItems.STEEL_INGOT);
@@ -84,6 +86,8 @@ public class ModItemGroups {
 
                         entries.add(ModItems.PIRATE_HELMET);
                         entries.add(ModItems.CURSED_PIRATE_HELMET);
+
+                        entries.add(ModItems.ARCANE_DUST);
                     }))
                     .build()
     );

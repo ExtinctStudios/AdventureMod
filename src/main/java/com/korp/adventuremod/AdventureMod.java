@@ -1,6 +1,7 @@
 package com.korp.adventuremod;
 
 import com.korp.adventuremod.entity.HuskEntity;
+import com.korp.adventuremod.entity.ModBlockEntities;
 import com.korp.adventuremod.registries.*;
 import com.korp.adventuremod.util.InventoryUtil;
 import com.korp.adventuremod.world.gen.ModWorldGeneration;
@@ -38,11 +39,13 @@ public class AdventureMod implements ModInitializer {
     public void onInitialize() {
         ModEntities.initialize();
         ModBlocks.initialize();
+        ModBlockEntities.initialize();
         ModItems.initialize();
         ModItemGroups.initialize();
         ModArmorMaterials.initialize();
         ModWorldGeneration.initialize();
         ModModelPredicates.initialize();
+        ModScreenHandlers.initialize();
 
         FabricDefaultAttributeRegistry.register(ModEntities.HUSK, HuskEntity.createAttributes());
 

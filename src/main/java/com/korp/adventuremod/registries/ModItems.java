@@ -353,6 +353,8 @@ public class ModItems {
             "cursed_pirate_helmet"
     );
 
+    public static final Item ARCANE_DUST = register(new Item(new Item.Settings()), "arcane_dust");
+
     public static void initialize(){}
 
     public static Item register(Item item, String id) {

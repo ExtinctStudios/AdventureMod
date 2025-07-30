@@ -18,6 +18,7 @@ public class ModModelProvider extends FabricModelProvider {
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.MEAT);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.BLOODSTONE_ORE);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.ARCANE_EXTRACTOR);
     }
 
     @Override
@@ -89,5 +90,7 @@ public class ModModelProvider extends FabricModelProvider {
 
         itemModelGenerator.registerArmor((ArmorItem) ModItems.PIRATE_HELMET);
         itemModelGenerator.registerArmor((ArmorItem) ModItems.CURSED_PIRATE_HELMET);
+
+        itemModelGenerator.register(ModItems.ARCANE_DUST, Models.HANDHELD);
     }
 }

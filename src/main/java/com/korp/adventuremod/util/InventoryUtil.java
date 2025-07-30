@@ -6,6 +6,8 @@ import net.minecraft.entity.ItemEntity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
+import net.minecraft.item.ArmorItem;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemConvertible;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.math.Vec3d;
@@ -107,5 +109,9 @@ public class InventoryUtil {
         else {
             return false;
         }
+    }
+
+    public static boolean isWearingArmorItemInDesignatedSlot(PlayerEntity playerEntity, Item item){
+        return item instanceof ArmorItem armorItem && playerEntity.getEquippedStack(armorItem.getSlotType()).getItem() == armorItem;
     }
 }

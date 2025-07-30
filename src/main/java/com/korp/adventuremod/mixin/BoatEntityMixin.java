@@ -1,9 +1,13 @@
 package com.korp.adventuremod.mixin;
 
 import com.korp.adventuremod.registries.ModItems;
+import com.korp.adventuremod.util.InventoryUtil;
+import com.korp.adventuremod.util.PlayerUtil;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.vehicle.BoatEntity;
+import net.minecraft.item.ArmorItem;
+import net.minecraft.item.Item;
 import net.minecraft.util.math.Vec3d;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
@@ -16,30 +20,25 @@ public class BoatEntityMixin {
     void tick(CallbackInfo ci){
         BoatEntity boatEntity = (BoatEntity)(Object)this;
 
-        // check if in water
-
-        final double PIRATE_HELMET_BOAT_SPEED = 12.0;
-        final double PIRATE_HELMET_BOAT_ACCELERATION_MULTIPLIER = 1.05;
-        final double CURSED_PIRATE_HELMET_BOAT_SPEED = 18.0;
-        final double CURSED_PIRATE_HELMET_BOAT_ACCELERATION_MULTIPLIER = 1.08;
-
         if(boatEntity.getControllingPassenger() instanceof PlayerEntity playerEntity){
-            if(playerEntity.getEquippedStack(EquipmentSlot.HEAD).getItem() == ModItems.PIRATE_HELMET) {// Set to pirate hat
-                if(boatEntity.getVelocity().length() <= PIRATE_HELMET_BOAT_SPEED){
-                    Vec3d velocity = boatEntity.getVelocity().multiply(PIRATE_HELMET_BOAT_ACCELERATION_MULTIPLIER);
-                    if(velocity.length() > PIRATE_HELMET_BOAT_SPEED){
-                        velocity = velocity.normalize().multiply(PIRATE_HELMET_BOAT_SPEED);
-                    }
-                    boatEntity.setVelocity(velocity);
+            applyConditionalVelocityMultiplierAndAcceleration(playerEntity, boatEntity, ModItems.PIRATE_HELMET, 12.0, 1.05);
+            applyConditionalVelocityMultiplierAndAcceleration(playerEntity, boatEntity, ModItems.CURSED_PIRATE_HELMET, 18.0, 1.08);
+        }
+    }
+
+    void applyConditionalVelocityMultiplierAndAcceleration(
+            PlayerEntity playerEntity,
+            BoatEntity boatEntity,
+            Item requiredItem,
+            double velocityMultiplier,
+            double accelerationMultiplier) {
+        if(InventoryUtil.isWearingArmorItemInDesignatedSlot(playerEntity, requiredItem)){
+            if(boatEntity.getVelocity().length() <= velocityMultiplier){
+                Vec3d velocity = boatEntity.getVelocity().multiply(accelerationMultiplier);
+                if(velocity.length() > velocityMultiplier){
+                    velocity = velocity.normalize().multiply(velocityMultiplier);
                 }
-            } else if(playerEntity.getEquippedStack(EquipmentSlot.HEAD).getItem() == ModItems.CURSED_PIRATE_HELMET) {// Set to pirate hat
-                if(boatEntity.getVelocity().length() <= CURSED_PIRATE_HELMET_BOAT_SPEED){
-                    Vec3d velocity = boatEntity.getVelocity().multiply(CURSED_PIRATE_HELMET_BOAT_ACCELERATION_MULTIPLIER);
-                    if(velocity.length() > CURSED_PIRATE_HELMET_BOAT_SPEED){
-                        velocity = velocity.normalize().multiply(CURSED_PIRATE_HELMET_BOAT_SPEED);
-                    }
-                    boatEntity.setVelocity(velocity);
-                }
+                boatEntity.setVelocity(velocity);
             }
         }
     }

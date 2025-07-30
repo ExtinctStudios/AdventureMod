@@ -42,7 +42,7 @@ public class HuskEntity extends HostileEntity {
         }
 
         {
-            this.targetSelector.add(0, new ActiveTargetGoal(this, PlayerEntity.class, true));
+            this.targetSelector.add(0, new ActiveTargetGoal<>(this, PlayerEntity.class, true));
         }
     }
 

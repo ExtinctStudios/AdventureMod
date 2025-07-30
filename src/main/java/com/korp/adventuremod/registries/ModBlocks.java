@@ -1,6 +1,7 @@
 package com.korp.adventuremod.registries;
 
 import com.korp.adventuremod.AdventureMod;
+import com.korp.adventuremod.block.ArcaneExtractorBlock;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.ExperienceDroppingBlock;
@@ -23,6 +24,9 @@ public class ModBlocks {
                     .strength(4.0f)
                     .requiresTool()
                     .sounds(BlockSoundGroup.BONE)));
+
+    public static final Block ARCANE_EXTRACTOR = registerBlock("arcane_extractor",
+            new ArcaneExtractorBlock(AbstractBlock.Settings.create()));
 
     public static Block registerBlock(String id, Block block){
         registerBlockItem(id, block);
