@@ -30,6 +30,7 @@ public class ArcaneExtractorScreenHandler extends ScreenHandler {
 
         this.addSlot(new Slot(inventory, 0, 54, 34));
         this.addSlot(new Slot(inventory, 1, 106, 34));
+        this.addSlot(new Slot(inventory, 2, 54, 54));
 
         addPlayerInventory(playerInventory);
         addPlayerHotbar(playerInventory);

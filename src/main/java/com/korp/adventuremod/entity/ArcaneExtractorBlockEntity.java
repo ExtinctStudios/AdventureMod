@@ -30,14 +30,15 @@ public class ArcaneExtractorBlockEntity extends BlockEntity implements ExtendedS
     public static final int PROPERTY_DELEGATE_PROGRESS = 0;
     public static final int PROPERTY_DELEGATE_MAX_PROGRESS = 1;
 
-    final DefaultedList<ItemStack> inventory = DefaultedList.ofSize(2, ItemStack.EMPTY);
+    final DefaultedList<ItemStack> inventory = DefaultedList.ofSize(3, ItemStack.EMPTY);
 
     static final int INPUT_SLOT = 0;
     static final int OUTPUT_SLOT = 1;
+    static final int SUBSTRATE_SLOT = 2;
 
     protected final PropertyDelegate propertyDelegate;
     int progress = 0;
-    int maxProgress = 60;
+    int maxProgress = 110;
 
     public ArcaneExtractorBlockEntity(BlockPos pos, BlockState state) {
         super(ModBlockEntities.ARCANE_EXTRACTOR, pos, state);
@@ -120,6 +121,7 @@ public class ArcaneExtractorBlockEntity extends BlockEntity implements ExtendedS
         ItemStack output = new ItemStack(ModItems.WARP_ESSENCE, 1);
 
         this.removeStack(INPUT_SLOT, 1);
+        this.removeStack(SUBSTRATE_SLOT, 1);
         this.setStack(OUTPUT_SLOT, new ItemStack(ModItems.WARP_ESSENCE, this.getStack(OUTPUT_SLOT).getCount() + output.getCount()));
     }
 
@@ -133,14 +135,18 @@ public class ArcaneExtractorBlockEntity extends BlockEntity implements ExtendedS
 
     private void resetProgress() {
         this.progress = 0;
-        this.maxProgress = 60;
+        this.maxProgress = 110;
     }
 
     private boolean hasRecipe() {
         Item input = Items.ENDER_PEARL;
+        Item substrate = ModItems.ARCANE_DUST;
         ItemStack output = new ItemStack(ModItems.WARP_ESSENCE);
 
-        return this.getStack(INPUT_SLOT).isOf(input) && canInsertAmountIntoOutputSlot(output.getCount()) && canInsertItemIntoOutputSlot(output);
+        return this.getStack(INPUT_SLOT).isOf(input) &&
+                this.getStack(SUBSTRATE_SLOT).isOf(substrate) &&
+                canInsertAmountIntoOutputSlot(output.getCount()) &&
+                canInsertItemIntoOutputSlot(output);
     }
 
     private boolean canInsertAmountIntoOutputSlot(int count) {
